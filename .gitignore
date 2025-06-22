@@ -1,0 +1,31 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.tweet-cache/
+
+# Ruby
+.bundle/
+.ruby-version
+Gemfile.lock
+
+# Node / JS
+node_modules/
+assets/libs/
+
+# IDEs / OS
+.idea/
+.DS_Store
+
+# Al-folio générés localement
+readme_preview/
+lighthouse_results/
+
+# Trop lourd
+assets/video/tutorial_al_folio.mp4
+assets/img/prof_pic_color.png
+
+# usless/
+*.log
+*.tmp

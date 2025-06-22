@@ -1,0 +1,139 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Dimensions
+$max-content-width: {{ site.max_width }};
+
+@import
+  "variables",
+  "themes",
+  "layout",
+  "base",
+  "distill",
+  "cv",
+  "tabs",
+  "typograms",
+  "font-awesome/fontawesome",
+  "font-awesome/brands",
+  "font-awesome/solid",
+  "font-awesome/regular",
+  "tabler-icons/tabler-icons.scss",
+  "tabler-icons/tabler-icons-filled.scss",
+  "tabler-icons/tabler-icons-outline.scss"
+;
+
+// Outline required contact field
+input.invalid,
+textarea.invalid {
+  border: 1px solid #ff3838 !important;
+}
+
+// Contact field error
+.error-message {
+  display: none;
+  color: #ff3838;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+
+// Profile more info
+.profile-info {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+// Text about
+.about-text{
+  text-align: center
+}
+
+// Linkedin icon
+.li-icon { background: #0e76a8; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: initial; }
+.li-icon:hover { background: #2eb0ee; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+// Github icon
+.gh-icon { color: #25292e; background: #25292e; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: initial; }
+.gh-icon:hover { color: #525b67; background: #525b67; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+// Swap light / dark color icon 
+html[data-theme="dark"] .gh-icon {
+  filter: invert(1);
+}
+// Gmail
+.gm-icon { background: #c84e3f; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: initial; }
+.gm-icon:hover { background: #df978e; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+
+// Swap light & dark icon color
+html[data-theme="dark"] .cs-icon {
+  filter: invert(1);
+}
+
+// Zoom on projets illustration on hover
+.zoom-on-hover {
+  transition: transform 0.3s ease; 
+}
+.card:hover .zoom-on-hover {
+  transform: scale(1.05);
+}
+.card.hoverable {
+  overflow: hidden;
+}
+
+// Font Titles
+.title {
+  font-family: 'Roboto Slab', serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif !important;
+}
+
+
+// Hide before transition
+html.js-loading #content-wrapper h1,
+html.js-loading #content-wrapper h2,
+html.js-loading #content-wrapper h3,
+html.js-loading #content-wrapper h4,
+html.js-loading #content-wrapper h5,
+html.js-loading #content-wrapper h6,
+html.js-loading #content-wrapper p,
+html.js-loading #content-wrapper li,
+html.js-loading #content-wrapper img,
+html.js-loading #content-wrapper blockquote,
+html.js-loading #content-wrapper figure,
+html.js-loading #content-wrapper pre,
+html.js-loading #content-wrapper table,
+html.js-loading #content-wrapper hr,
+html.js-loading #content-wrapper dl,
+html.js-loading #content-wrapper dd,
+html.js-loading #content-wrapper dt,
+html.js-loading #content-wrapper form,
+html.js-loading #content-wrapper input,
+html.js-loading #content-wrapper textarea,
+html.js-loading #content-wrapper select,
+html.js-loading #content-wrapper button,
+html.js-loading #content-wrapper label,
+html.js-loading #content-wrapper div.card {
+  opacity: 0 !important;
+}
+
+// Transition
+.staggered-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.staggered-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+html.js-loading body {
+  opacity: 0;
+}
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
