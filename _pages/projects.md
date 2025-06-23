@@ -6,7 +6,7 @@ description: >
   Quelques projets que j'ai mené.
 nav: true
 nav_order: 2
-display_categories: [personnel, professionnel, académique]
+display_categories: [personnels, professionnels, académiques]
 horizontal: false
 ---
 
