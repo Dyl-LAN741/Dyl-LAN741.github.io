@@ -3,7 +3,7 @@ published: true
 
 layout: page
 title: "Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA"
-description: Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.
+description: Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique via la fédération des identités, l'automatisation du provisioning des comptes utilisateurs, et la mise en place du MFA pour les accès aux consoles d'AWS et d'Okta.
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnels
@@ -52,11 +52,11 @@ Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par pal
 
 **4.** Intégration d’Okta comme fournisseur d’identité avec le fournisseur cloud AWS via SAML 2.0 pour effectuer la fédération d'identité et mettre en place l'authentification unique ou Single Sign-On (SSO).
 
-**5.** Mise en place le provisioning automatisé des comptes AWS depuis Okta via le protocole SCIM.
+**5.** Mise en place du provisioning automatisé des comptes AWS depuis Okta via le protocole SCIM.
 
 <br>
 
-## Architecture
+## Organigrammes
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -85,13 +85,13 @@ Voici la liste des technologies et outils que j’ai utilisés pour concevoir et
 
     * **VPC** pour configurer le réseau (sous-réseaux, groupes de sécurité, passerelle internet, table de routage, ...).
 
-    * **EC2** pour l'hebergement des instances (intance web publique, instance privée, bastion, instance NAT).
+    * **EC2** pour l'hebergement des instances (instance web, instance privée, bastion, instance NAT).
 
     * **RDS** pour le stockage des données dans MySQL.
 
     * **IAM** pour définir les utilisateurs, groupes, rôles et politiques d’accès au ressource AWS.
 
-    * **IAM Identity Center** pour l'intégration du fournisseur d'identité Okta à AWS via SAML 2.0 et la gestion du provisioning via SCIM.
+    * **IAM Identity Center** pour l'intégration du fournisseur d'identité Okta avec AWS.
 
 * **Terraform** pour automatiser le déploiement de l'infrastructure cloud en suivant les principes de l'Infranstructure as Code (IaC).
 
@@ -99,15 +99,15 @@ Voici la liste des technologies et outils que j’ai utilisés pour concevoir et
 
 * **Okta Verify** pour générer les codes temporaires nécéssaire à la mise en place de l'authentification multifacteur (MFA).
 
-* **SAML 2.0** pour permettre la fédération d'identité entre Okta et AWS et activer l'authentification unique SSO depuis l'espace utilisateur d'Okta vers la console d'administration d'AWS.
+* **SAML 2.0** pour établir la fédération d'identité entre Okta et AWS et activer l'authentification unique SSO depuis l'espace utilisateur d'Okta vers la console d'AWS.
 
-* **SCIM** pour mettre en place le provisioning automatisé des utilisateurs d'Okta vers AWS IAM Identy Center.
+* **SCIM** pour permettre le provisioning automatisé des utilisateurs et groupes d'Okta vers AWS IAM Identity Center, afin qu’ils puissent accéder aux ressources des comptes AWS avec des rôles attribués.
 
-> Pour utiliser la version d'essai d'Okta, j'ai mis en place un serveur de messagerie, en utilisant Zoho mail comme service de messagerie professionnel.
+> Pour utiliser la version d'essai d'Okta, j'ai mis en place un serveur de messagerie, en utilisant Zoho Mail comme service de messagerie professionnel.
 
 ## Fonctionnalités mises en place
 
-Dans le cadre de ce projet, plusieurs fonctionnalités ont été déployées, en s’appuyant sur les bonnes pratiques en matière de sécurité cloud et de l’IAM :
+Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place, en s’appuyant sur les bonnes pratiques de sécurité cloud et de gestion des identités (IAM) :
 
 * **Segmentation réseau** en deux sous-réseaux privé et publique.
 
@@ -117,9 +117,9 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été déployées, en
 
 * Principes de **moindre privilège** avec des politiques IAM personnalisés et granulaires en fonction des rôles (**RBAC**).
 
-* **Infrastructure as Code (IaC)** via Terraform pour l'automatisation et la scalabilité.
+* **Infrastructure as Code (IaC)** via Terraform pour pour un déploiement automatisé, reproductible et scalable.
 
-* **Fédération d’identité** via SAML 2.0 permettant une **authentification unique (SSO)** entre Okta et AWS.
+* **Fédération d’identité** entre Okta et AWS via SAML 2.0 permettant une **authentification unique (SSO)**.
 
 * **Provisionning automatique** via SCIM pour une gestion centralisé des utilisateurs et des comptes AWS depuis Okta.
 
@@ -131,10 +131,10 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été déployées, en
 
 En menant à bien ce projet, j'ai appris à :
 
-* mettre en place une infrastructure cloud sécurisée en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques de cybersécurité.
+* mettre en place une infrastructure cloud sécurisée, en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.
 
 * concevoir et appliquer des politiques d'accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.
 
-* intégrer une solution de fournisseur d'identité (Okta) auprès d'un fournisseur de service (AWS) pour mettre en place la fédération d'identité et le provisioning automatisé.
+* intégrer une solution de fournisseur d'identité externe (Okta) auprès d'un fournisseur de service (AWS) pour mettre en place la fédération d'identité et le provisioning automatisé des utilisateurs.
 
-* mettre en place une authentification multifacteur MFA basé sur TOTP pour les accès sensibles (accès aux console d'administration d'Okta et d'AWS, MFA avant SSO).
+* mettre en place une authentification multifacteur (MFA) basé sur TOTP pour les accès sensibles (accès aux console d'Okta et d'AWS, application du MFA avant le SSO).
