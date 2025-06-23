@@ -10,7 +10,7 @@ email: dylan.haral@gmail.com
 contact_note: >
   Vous souhaitez me contacter ? Vous pouvez le faire <a href="/contact/">ici</a>.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Mon portfolio et blog sur l'actu en cybersécurité.
+  Mon site portfolio.
 footer_text: >
   Tous droits réservés · <a href="/privacy-policy/">Politique de confidentialité</a>
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
@@ -648,25 +648,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
-# -----------------------------------------------------------------------------
-# Get external JSON data
-# -----------------------------------------------------------------------------
-
-# jekyll_get_json:
-#   - data: resume
-#     json: assets/json/resume.json # it can also be an url
-
-# jsonresume:
-#   - basics
-#   - work
-#   - education
-#   - publications
-#   - projects
-#   - volunteer
-#   - awards
-#   - certificates
-#   - skills
-#   - languages
-#   - interests
-#   - references

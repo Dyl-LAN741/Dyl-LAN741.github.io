@@ -3,7 +3,7 @@ layout: page
 title: Mes projets
 permalink: /projets/
 description: >
-  Quelques projets que j'ai mené.
+  Voici quelques projets que j'ai réalisé :
 nav: true
 nav_order: 2
 display_categories: [personnels, professionnels, académiques]
