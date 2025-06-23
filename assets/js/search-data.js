@@ -34,5 +34,5 @@ ninja.data = [{
           title: 'Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA',
           description: "Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d&#39;automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d&#39;AWS et d&#39;Okta.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/personnels/aws_okta/";
+              window.location.href = "/projets/personnels/aws_okta/";
             },},];
