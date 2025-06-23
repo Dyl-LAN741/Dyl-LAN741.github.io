@@ -4,27 +4,27 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-dylan-haral",
-    title: "Dylan Haral",
+    title: "Dylan HARAL",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-cv",
-          title: "CV",
+  },{id: "nav-mon-cv",
+          title: "Mon CV",
           description: "Mon CV numérique est consultable ci-dessous, avec des informations et liens supplémentaires. Pour le télécharger au format PDF, cliquez sur l’icône PDF juste en haut à droite de cette page.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-projets",
-          title: "Projets",
+        },{id: "nav-mes-projets",
+          title: "Mes projets",
           description: "Quelques projets que j&#39;ai mené.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projets/";
           },
-        },{id: "nav-contact",
-          title: "Contact",
+        },{id: "nav-me-contacter",
+          title: "Me contacter",
           description: "",
           section: "Navigation",
           handler: () => {
