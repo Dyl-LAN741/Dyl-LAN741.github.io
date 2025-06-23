@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dylan.haral.github.io/sitemap.xml

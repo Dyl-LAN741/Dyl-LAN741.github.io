@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="fr" class="js-loading">
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA | Dylan Haral
+    
+  
+</title>
+<meta name="author" content="Dylan Haral">
+<meta name="description" content="Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.">
+
+  <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772">
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<!-- Code Syntax Highlighting -->
+<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link rel="shortcut icon" href="/assets/img/android-chrome-192x192.png?9b9f279107a2cf0c61f1793ea6591480">
+
+<link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
+<link rel="canonical" href="https://dylan.haral.github.io/projects/personnels/aws_okta/">
+
+<!-- Dark Mode -->
+<script src="/assets/js/theme.js?01716cb2112f2e0d509da508ce5485e8"></script>
+
+
+
+
+
+
+
+  
+  
+  
+  
+    <!-- Image slider -->
+    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" integrity="sha256-yUoNxsvX+Vo8Trj3lZ/Y5ZBf8HlBFsB6Xwm7rH75/9E=" crossorigin="anonymous">
+  
+  
+  
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&amp;display=swap" rel="stylesheet">
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm z-depth-1 fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          
+            
+              <span class="font-weight-bold">Dylan
+            
+            Haral</span>
+            
+          
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          
+          <!-- About -->
+          
+          
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cv/">CV
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/projets/">Projets
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/contact/">Contact
+                    
+                  </a>
+                </li>
+              
+            
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div id="content-wrapper">
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA</h1>
+    <p class="post-description">Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.</p>
+  </header>
+
+  <article>
+    <h2 id="apercu">Apercu</h2>
+
+<swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay='{"delay":5000,"disableOnInteraction":false}' speed="1000">
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/4_mfa_aws-480.webp 480w,/assets/img/projects/personnels/aws_okta/4_mfa_aws-800.webp 800w,/assets/img/projects/personnels/aws_okta/4_mfa_aws-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/4_mfa_aws.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/5_okta_dashboard-480.webp 480w,/assets/img/projects/personnels/aws_okta/5_okta_dashboard-800.webp 800w,/assets/img/projects/personnels/aws_okta/5_okta_dashboard-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/5_okta_dashboard.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/6_okta_people-480.webp 480w,/assets/img/projects/personnels/aws_okta/6_okta_people-800.webp 800w,/assets/img/projects/personnels/aws_okta/6_okta_people-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/6_okta_people.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/7_okta_groups-480.webp 480w,/assets/img/projects/personnels/aws_okta/7_okta_groups-800.webp 800w,/assets/img/projects/personnels/aws_okta/7_okta_groups-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/7_okta_groups.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/8_okta_aws_people_assign-480.webp 480w,/assets/img/projects/personnels/aws_okta/8_okta_aws_people_assign-800.webp 800w,/assets/img/projects/personnels/aws_okta/8_okta_aws_people_assign-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/8_okta_aws_people_assign.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/9_okta_aws_groups_assign-480.webp 480w,/assets/img/projects/personnels/aws_okta/9_okta_aws_groups_assign-800.webp 800w,/assets/img/projects/personnels/aws_okta/9_okta_aws_groups_assign-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/9_okta_aws_groups_assign.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/10_okta_user_console-480.webp 480w,/assets/img/projects/personnels/aws_okta/10_okta_user_console-800.webp 800w,/assets/img/projects/personnels/aws_okta/10_okta_user_console-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/10_okta_user_console.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/11_mfa_okta-480.webp 480w,/assets/img/projects/personnels/aws_okta/11_mfa_okta-800.webp 800w,/assets/img/projects/personnels/aws_okta/11_mfa_okta-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/11_mfa_okta.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/12_sso_aws-480.webp 480w,/assets/img/projects/personnels/aws_okta/12_sso_aws-800.webp 800w,/assets/img/projects/personnels/aws_okta/12_sso_aws-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/12_sso_aws.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/13_nat_config-480.webp 480w,/assets/img/projects/personnels/aws_okta/13_nat_config-800.webp 800w,/assets/img/projects/personnels/aws_okta/13_nat_config-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/13_nat_config.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+  <swiper-slide>
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/14_mysql_access-480.webp 480w,/assets/img/projects/personnels/aws_okta/14_mysql_access-800.webp 800w,/assets/img/projects/personnels/aws_okta/14_mysql_access-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/14_mysql_access.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+</swiper-slide>
+</swiper-container>
+
+<p><br></p>
+
+<h2 id="contexte">Contexte</h2>
+
+<p>Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.</p>
+
+<p>Je voulais un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes.</p>
+
+<p><br></p>
+
+<h3 id="objectifs">Objectifs</h3>
+
+<p>Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par paliers :</p>
+
+<p><strong>1.</strong> Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud.</p>
+
+<p><strong>2.</strong> Mise en place d’une gestion des identités et des accès, en applicant le principe du moindre privilège.</p>
+
+<p><strong>3.</strong> Mise en place de l’authentification multifacteur (MFA) avec TOTP via l’application Okta Verify.</p>
+
+<p><strong>4.</strong> Intégration d’Okta comme fournisseur d’identité avec le fournisseur cloud AWS via SAML 2.0 pour effectuer la fédération d’identité et mettre en place l’authentification unique ou Single Sign-On (SSO).</p>
+
+<p><strong>5.</strong> Mise en place le provisioning automatisé des comptes AWS depuis Okta via le protocole SCIM.</p>
+
+<p><br></p>
+
+<h2 id="architecture">Architecture</h2>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-480.webp 480w,/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-800.webp 800w,/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_infrastructure_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Schéma de l'infrastructure cloud AWS.
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+
+<figure>
+  <picture>
+    
+      
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-480.webp 480w,/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-800.webp 800w,/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+      
+    
+    <img src="/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_architecture_iam_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Schéma fonctionnel de la gestion des identiés et des accès et de l'intégration d’Okta à AWS.
+</div>
+
+<p><br></p>
+
+<h2 id="technologies-et-outils-utilisés">Technologies et outils utilisés</h2>
+
+<p>Voici la liste des technologies et outils que j’ai utilisés pour concevoir et déployer l’infrastructure cloud et mettre en place une architecture sécurisé avec IAM et fédération d’identité :</p>
+
+<ul>
+  <li>
+    <p><strong>AWS</strong>, avec les services suivant :</p>
+
+    <ul>
+      <li>
+        <p><strong>VPC</strong> pour configurer le réseau (sous-réseaux, groupes de sécurité, passerelle internet, table de routage, …).</p>
+      </li>
+      <li>
+        <p><strong>EC2</strong> pour l’hebergement des instances (intance web publique, instance privée, bastion, instance NAT).</p>
+      </li>
+      <li>
+        <p><strong>RDS</strong> pour le stockage des données dans MySQL.</p>
+      </li>
+      <li>
+        <p><strong>IAM</strong> pour définir les utilisateurs, groupes, rôles et politiques d’accès au ressource AWS.</p>
+      </li>
+      <li>
+        <p><strong>IAM Identity Center</strong> pour l’intégration du fournisseur d’identité Okta à AWS via SAML 2.0 et la gestion du provisioning via SCIM.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Terraform</strong> pour automatiser le déploiement de l’infrastructure cloud en suivant les principes de l’Infranstructure as Code (IaC).</p>
+  </li>
+  <li>
+    <p><strong>Okta</strong> (Developer / Integrator) pour jouer le rôle du fournisseur d’identité externe auprès d’AWS.</p>
+  </li>
+  <li>
+    <p><strong>Okta Verify</strong> pour générer les codes temporaires nécéssaire à la mise en place de l’authentification multifacteur (MFA).</p>
+  </li>
+  <li>
+    <p><strong>SAML 2.0</strong> pour permettre la fédération d’identité entre Okta et AWS et activer l’authentification unique SSO depuis l’espace utilisateur d’Okta vers la console d’administration d’AWS.</p>
+  </li>
+  <li>
+    <p><strong>SCIM</strong> pour mettre en place le provisioning automatisé des utilisateurs d’Okta vers AWS IAM Identy Center.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Pour utiliser la version d’essai d’Okta, j’ai mis en place un serveur de messagerie, en utilisant Zoho mail comme service de messagerie professionnel.</p>
+</blockquote>
+
+<h2 id="fonctionnalités-mises-en-place">Fonctionnalités mises en place</h2>
+
+<p>Dans le cadre de ce projet, plusieurs fonctionnalités ont été déployées, en s’appuyant sur les bonnes pratiques en matière de sécurité cloud et de l’IAM :</p>
+
+<ul>
+  <li>
+    <p><strong>Segmentation réseau</strong> en deux sous-réseaux privé et publique.</p>
+  </li>
+  <li>
+    <p><strong>Isolation réseau</strong> avec configuration de groupes de sécurité et ajout d’un bastion pour l’accès sécurité au service RDS (MySQL).</p>
+  </li>
+  <li>
+    <p><strong>Haute disponibilité</strong> (multi-AZ) et <strong>réplication des données</strong> (réplication synchrone) du service RDS.</p>
+  </li>
+  <li>
+    <p>Principes de <strong>moindre privilège</strong> avec des politiques IAM personnalisés et granulaires en fonction des rôles (<strong>RBAC</strong>).</p>
+  </li>
+  <li>
+    <p><strong>Infrastructure as Code (IaC)</strong> via Terraform pour l’automatisation et la scalabilité.</p>
+  </li>
+  <li>
+    <p><strong>Fédération d’identité</strong> via SAML 2.0 permettant une <strong>authentification unique (SSO)</strong> entre Okta et AWS.</p>
+  </li>
+  <li>
+    <p><strong>Provisionning automatique</strong> via SCIM pour une gestion centralisé des utilisateurs et des comptes AWS depuis Okta.</p>
+  </li>
+  <li>
+    <p>Sécurité renforcée avec <strong>authentifications multifacteurs (MFA)</strong> basé sur des <strong>codes temporaires (TOTP)</strong> en utilisant l’application Okta Verify.</p>
+  </li>
+</ul>
+
+<p><br></p>
+
+<h2 id="ce-que-jai-appris">Ce que j’ai appris</h2>
+
+<p>En menant à bien ce projet, j’ai appris à :</p>
+
+<ul>
+  <li>
+    <p>mettre en place une infrastructure cloud sécurisée en utilisant l’Infrastructure as Code et en respectant les bonnes pratiques de cybersécurité.</p>
+  </li>
+  <li>
+    <p>concevoir et appliquer des politiques d’accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.</p>
+  </li>
+  <li>
+    <p>intégrer une solution de fournisseur d’identité (Okta) auprès d’un fournisseur de service (AWS) pour mettre en place la fédération d’identité et le provisioning automatisé.</p>
+  </li>
+  <li>
+    <p>mettre en place une authentification multifacteur MFA basé sur TOTP pour les accès sensibles (accès aux console d’administration d’Okta et d’AWS, MFA avant SSO).</p>
+  </li>
+</ul>
+
+  </article>
+
+  
+
+  
+</div>
+</div>
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    
+
+    <div class="container">
+      
+  © 2025
+  Dylan
+  
+  Haral · Tous droits réservés · <a href="/privacy-policy/">Politique de confidentialité</a>
+
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+<!-- Transition -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    document.body.classList.add("loaded");
+    document.documentElement.classList.remove("js-loading");
+
+    const selector = `
+      #content-wrapper h1,
+      #content-wrapper h2,
+      #content-wrapper h3,
+      #content-wrapper h4,
+      #content-wrapper h5,
+      #content-wrapper h6,
+      #content-wrapper p,
+      #content-wrapper li,
+      #content-wrapper img,
+      #content-wrapper blockquote,
+      #content-wrapper figure,
+      #content-wrapper pre,
+      #content-wrapper table,
+      #content-wrapper hr,
+      #content-wrapper dl,
+      #content-wrapper dd,
+      #content-wrapper dt,
+      #content-wrapper form,
+      #content-wrapper input,
+      #content-wrapper textarea,
+      #content-wrapper select,
+      #content-wrapper button,
+      #content-wrapper label,
+      #content-wrapper div.card,
+      #content-wrapper a.nav-link
+    `;
+    
+    const elements = document.querySelectorAll(selector);
+    const baseDelay = 280;
+    const stagger = 60;
+
+    elements.forEach((el, index) => {
+      el.classList.add("staggered-fade");
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, baseDelay + index * stagger);
+    });
+  });
+</script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Tooltips -->
+  <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script>
+
+
+
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
+<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  
+    <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script>
+
+
+
+  <!-- Image Layouts -->
+  
+  
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-element-bundle.min.js" integrity="sha256-BPrwikijIybg9OQC5SYFFqhBjERYOn97tCureFgYH1E=" crossorigin="anonymous"></script>
+  
+  
+  
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+
+
+
+  </body>
+</html>

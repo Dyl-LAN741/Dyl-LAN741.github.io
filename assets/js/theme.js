@@ -1,0 +1,1 @@
+document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-setting","light"),localStorage.removeItem("theme");
