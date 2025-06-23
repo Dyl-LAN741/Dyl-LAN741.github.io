@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: Me contacter
 permalink: /contact/
 nav: true
 nav_order: 4
