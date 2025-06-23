@@ -7,6 +7,7 @@ description: Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnels
+permalink: /projets/personnels/aws_okta/
 # toc:
 #   sidebar: left
 images:
