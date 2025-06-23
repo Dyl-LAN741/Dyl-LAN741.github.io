@@ -10,6 +10,6 @@ children:
   # - title: Blog
   #   permalink: /blog/
   # - title: divider
-  - title: Contact
-    permalink: /contact/
+  # - title: Contact
+  #   permalink: /contact/
 ---

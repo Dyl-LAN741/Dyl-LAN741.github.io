@@ -8,7 +8,7 @@ img: assets/img/projects/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnel
 # toc:
-#   sidebar: right
+#   sidebar: left
 images:
     slider: true
 ---
