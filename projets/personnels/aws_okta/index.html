@@ -22,7 +22,7 @@
   
 </title>
 <meta name="author" content="Dylan HARAL">
-<meta name="description" content="Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.">
+<meta name="description" content="Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique via la fédération des identités, l'automatisation du provisioning des comptes utilisateurs, et la mise en place du MFA pour les accès aux consoles d'AWS et d'Okta.">
 
   <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
@@ -201,7 +201,7 @@
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA</h1>
-    <p class="post-description">Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.</p>
+    <p class="post-description">Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique via la fédération des identités, l'automatisation du provisioning des comptes utilisateurs, et la mise en place du MFA pour les accès aux consoles d'AWS et d'Okta.</p>
   </header>
 
   <article>
@@ -419,11 +419,11 @@
 
 <p><strong>4.</strong> Intégration d’Okta comme fournisseur d’identité avec le fournisseur cloud AWS via SAML 2.0 pour effectuer la fédération d’identité et mettre en place l’authentification unique ou Single Sign-On (SSO).</p>
 
-<p><strong>5.</strong> Mise en place le provisioning automatisé des comptes AWS depuis Okta via le protocole SCIM.</p>
+<p><strong>5.</strong> Mise en place du provisioning automatisé des comptes AWS depuis Okta via le protocole SCIM.</p>
 
 <p><br></p>
 
-<h2 id="architecture">Architecture</h2>
+<h2 id="organigrammes">Organigrammes</h2>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -489,7 +489,7 @@
         <p><strong>VPC</strong> pour configurer le réseau (sous-réseaux, groupes de sécurité, passerelle internet, table de routage, …).</p>
       </li>
       <li>
-        <p><strong>EC2</strong> pour l’hebergement des instances (intance web publique, instance privée, bastion, instance NAT).</p>
+        <p><strong>EC2</strong> pour l’hebergement des instances (instance web, instance privée, bastion, instance NAT).</p>
       </li>
       <li>
         <p><strong>RDS</strong> pour le stockage des données dans MySQL.</p>
@@ -498,7 +498,7 @@
         <p><strong>IAM</strong> pour définir les utilisateurs, groupes, rôles et politiques d’accès au ressource AWS.</p>
       </li>
       <li>
-        <p><strong>IAM Identity Center</strong> pour l’intégration du fournisseur d’identité Okta à AWS via SAML 2.0 et la gestion du provisioning via SCIM.</p>
+        <p><strong>IAM Identity Center</strong> pour l’intégration du fournisseur d’identité Okta avec AWS.</p>
       </li>
     </ul>
   </li>
@@ -512,20 +512,20 @@
     <p><strong>Okta Verify</strong> pour générer les codes temporaires nécéssaire à la mise en place de l’authentification multifacteur (MFA).</p>
   </li>
   <li>
-    <p><strong>SAML 2.0</strong> pour permettre la fédération d’identité entre Okta et AWS et activer l’authentification unique SSO depuis l’espace utilisateur d’Okta vers la console d’administration d’AWS.</p>
+    <p><strong>SAML 2.0</strong> pour établir la fédération d’identité entre Okta et AWS et activer l’authentification unique SSO depuis l’espace utilisateur d’Okta vers la console d’AWS.</p>
   </li>
   <li>
-    <p><strong>SCIM</strong> pour mettre en place le provisioning automatisé des utilisateurs d’Okta vers AWS IAM Identy Center.</p>
+    <p><strong>SCIM</strong> pour permettre le provisioning automatisé des utilisateurs et groupes d’Okta vers AWS IAM Identity Center, afin qu’ils puissent accéder aux ressources des comptes AWS avec des rôles attribués.</p>
   </li>
 </ul>
 
 <blockquote>
-  <p>Pour utiliser la version d’essai d’Okta, j’ai mis en place un serveur de messagerie, en utilisant Zoho mail comme service de messagerie professionnel.</p>
+  <p>Pour utiliser la version d’essai d’Okta, j’ai mis en place un serveur de messagerie, en utilisant Zoho Mail comme service de messagerie professionnel.</p>
 </blockquote>
 
 <h2 id="fonctionnalités-mises-en-place">Fonctionnalités mises en place</h2>
 
-<p>Dans le cadre de ce projet, plusieurs fonctionnalités ont été déployées, en s’appuyant sur les bonnes pratiques en matière de sécurité cloud et de l’IAM :</p>
+<p>Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place, en s’appuyant sur les bonnes pratiques de sécurité cloud et de gestion des identités (IAM) :</p>
 
 <ul>
   <li>
@@ -541,10 +541,10 @@
     <p>Principes de <strong>moindre privilège</strong> avec des politiques IAM personnalisés et granulaires en fonction des rôles (<strong>RBAC</strong>).</p>
   </li>
   <li>
-    <p><strong>Infrastructure as Code (IaC)</strong> via Terraform pour l’automatisation et la scalabilité.</p>
+    <p><strong>Infrastructure as Code (IaC)</strong> via Terraform pour pour un déploiement automatisé, reproductible et scalable.</p>
   </li>
   <li>
-    <p><strong>Fédération d’identité</strong> via SAML 2.0 permettant une <strong>authentification unique (SSO)</strong> entre Okta et AWS.</p>
+    <p><strong>Fédération d’identité</strong> entre Okta et AWS via SAML 2.0 permettant une <strong>authentification unique (SSO)</strong>.</p>
   </li>
   <li>
     <p><strong>Provisionning automatique</strong> via SCIM pour une gestion centralisé des utilisateurs et des comptes AWS depuis Okta.</p>
@@ -562,16 +562,16 @@
 
 <ul>
   <li>
-    <p>mettre en place une infrastructure cloud sécurisée en utilisant l’Infrastructure as Code et en respectant les bonnes pratiques de cybersécurité.</p>
+    <p>mettre en place une infrastructure cloud sécurisée, en utilisant l’Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.</p>
   </li>
   <li>
     <p>concevoir et appliquer des politiques d’accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.</p>
   </li>
   <li>
-    <p>intégrer une solution de fournisseur d’identité (Okta) auprès d’un fournisseur de service (AWS) pour mettre en place la fédération d’identité et le provisioning automatisé.</p>
+    <p>intégrer une solution de fournisseur d’identité externe (Okta) auprès d’un fournisseur de service (AWS) pour mettre en place la fédération d’identité et le provisioning automatisé des utilisateurs.</p>
   </li>
   <li>
-    <p>mettre en place une authentification multifacteur MFA basé sur TOTP pour les accès sensibles (accès aux console d’administration d’Okta et d’AWS, MFA avant SSO).</p>
+    <p>mettre en place une authentification multifacteur (MFA) basé sur TOTP pour les accès sensibles (accès aux console d’Okta et d’AWS, application du MFA avant le SSO).</p>
   </li>
 </ul>
 

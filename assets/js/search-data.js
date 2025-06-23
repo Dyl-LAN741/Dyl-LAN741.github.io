@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "projects-intégration-d-okta-à-aws-fédération-d-identité-provisioning-et-mfa",
           title: 'Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA',
-          description: "Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d&#39;automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d&#39;AWS et d&#39;Okta.",
+          description: "Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités et des accès, en appliquant l&#39;authentification unique via la fédération des identités, l&#39;automatisation du provisioning des comptes utilisateurs, et la mise en place du MFA pour les accès aux consoles d&#39;AWS et d&#39;Okta.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/personnels/aws_okta/";
             },},];
