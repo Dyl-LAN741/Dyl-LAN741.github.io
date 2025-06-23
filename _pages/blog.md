@@ -2,8 +2,8 @@
 published: false
 
 layout: default
-permalink: /blog/
 title: Blog
+permalink: /blog/
 nav: false
 nav_order: 3
 pagination:

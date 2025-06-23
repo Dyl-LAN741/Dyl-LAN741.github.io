@@ -2,8 +2,8 @@
 published: false
 
 layout: book-shelf
-title: bookshelf
-permalink: /books/
+title: Bibliothèque
+permalink: /livres/
 nav: false
 collection: books
 ---

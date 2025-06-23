@@ -4,9 +4,9 @@ published: true
 layout: page
 title: "Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA"
 description: Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités via la fédération des identités, d'automatiser le provisioning des comptes utilisateurs, et de mettre en place un MFA pour les accès aux consoles de gestion d'AWS et d'Okta.
-img: assets/img/projects/1_projet_aws_okta_illustration.png
+img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
-category: personnel
+category: personnels
 # toc:
 #   sidebar: left
 images:
@@ -16,17 +16,17 @@ images:
 ## Apercu
 
 <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay='{"delay":5000,"disableOnInteraction":false}' speed="1000">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/4_mfa_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/5_okta_dashboard.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/6_okta_people.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/7_okta_groups.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/8_okta_aws_people_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/9_okta_aws_groups_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/10_okta_user_console.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/11_mfa_okta.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/12_sso_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/13_nat_config.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/14_mysql_access.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/4_mfa_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/5_okta_dashboard.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/6_okta_people.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/7_okta_groups.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/8_okta_aws_people_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/9_okta_aws_groups_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/10_okta_user_console.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/11_mfa_okta.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/12_sso_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/13_nat_config.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/14_mysql_access.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
 </swiper-container>
 
 <br>
@@ -59,7 +59,7 @@ Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par pal
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/2_projet_aws_okta_infra.png" title="schema_infrastructure_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra.png" title="schema_infrastructure_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -67,7 +67,7 @@ Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par pal
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/3_projet_aws_okta_iam.png" title="schema_architecture_iam_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam.png" title="schema_architecture_iam_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">

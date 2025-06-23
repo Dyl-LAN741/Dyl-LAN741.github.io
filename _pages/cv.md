@@ -1,7 +1,7 @@
 ---
 layout: cv
-permalink: /cv/
 title: CV
+permalink: /cv/
 nav: true
 nav_order: 1
 cv_pdf: CV_Dylan_Haral.pdf # also external links are usable
