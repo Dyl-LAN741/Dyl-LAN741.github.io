@@ -14,7 +14,7 @@ images:
     slider: true
 ---
 
-## Apercu
+## Aperçu
 
 <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay='{"delay":5000,"disableOnInteraction":false}' speed="1000">
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/4_mfa_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
@@ -131,7 +131,7 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place,
 
 En menant à bien ce projet, j'ai appris à :
 
-* mettre en place une infrastructure cloud sécurisée, en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.
+* mettre en place une infrastructure cloud sécurisée en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.
 
 * concevoir et appliquer des politiques d'accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.
 
