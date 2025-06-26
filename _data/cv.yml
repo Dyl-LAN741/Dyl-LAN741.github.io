@@ -40,7 +40,7 @@
         - Réalisation d’un pentest d’une machine Linux à partir du nom de domaine dans un cadre exploratoire.<br>
         - title: "<u><b>Résultats</b></u> :"
           contents:
-            - <b>Livrable (rapport de 40 pages).
+            - <b>Livrable</b> (rapport de 40 pages).
             - <b>Phase de pré production terminée</b> pour la plateforme de monitoring. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/exporter">[voir 1]</a> <a href="https://github.com/Dyl-LAN741/apex">[voir 2]</a>
             - <b>Intégration réussi</b> du filtre d'adresses IP dans le firewall externe. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/ip_filter">[voir]</a>
             - <b>Rédaction d’un rapport</b> sur le test d’intrusion, incluant les étapes d’exploitation (sans compromission).

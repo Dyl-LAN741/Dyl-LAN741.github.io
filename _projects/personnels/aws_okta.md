@@ -103,7 +103,7 @@ Voici la liste des technologies et outils que j’ai utilisés pour concevoir et
 
 * **SCIM** pour permettre le provisioning automatisé des utilisateurs et groupes d'Okta vers AWS IAM Identity Center, afin qu’ils puissent accéder aux ressources des comptes AWS avec des rôles attribués.
 
-> Pour utiliser la version d'essai d'Okta, j'ai mis en place un serveur de messagerie, en utilisant Zoho Mail comme service de messagerie professionnel.
+> Pour utiliser la version d’essai d’Okta, j’ai configuré une adresse e-mail professionnelle via Zoho Mail, en liant mon nom de domaine depuis un hebergeur.
 
 ## Fonctionnalités mises en place
 
@@ -121,7 +121,7 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place,
 
 * **Fédération d’identité** entre Okta et AWS via SAML 2.0 permettant une **authentification unique (SSO)**.
 
-* **Provisionning automatique** via SCIM pour une gestion centralisé des utilisateurs et des comptes AWS depuis Okta.
+* **Provisioning automatique** via SCIM pour une gestion centralisé des utilisateurs et des comptes AWS depuis Okta.
 
 * Sécurité renforcée avec **authentifications multifacteurs (MFA)** basé sur des **codes temporaires (TOTP)** en utilisant l'application Okta Verify.
 
