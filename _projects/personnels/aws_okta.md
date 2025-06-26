@@ -103,7 +103,7 @@ Voici la liste des technologies et outils que j’ai utilisés pour concevoir et
 
 * **SCIM** pour permettre le provisioning automatisé des utilisateurs et groupes d'Okta vers AWS IAM Identity Center, afin qu’ils puissent accéder aux ressources des comptes AWS avec des rôles attribués.
 
-> Pour utiliser la version d’essai d’Okta, j’ai configuré une adresse e-mail professionnelle via Zoho Mail, en liant mon nom de domaine depuis un hebergeur.
+> Pour utiliser la version d’essai d’Okta, j’ai configuré une adresse e-mail professionnelle via Zoho Mail, en liant mon nom de domaine depuis un hébergeur.
 
 ## Fonctionnalités mises en place
 
