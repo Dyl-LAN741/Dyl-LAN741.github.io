@@ -2,9 +2,9 @@
 published: true
 
 layout: page
-title: "Supervision centralisée des logs et alertes avec Prometheus et Grafana."
+title: "Supervision centralisée des logs et alertes avec Prometheus et Grafana"
 description: Dans ce projet, j’ai développé un pipeline en Python pour convertir des logs et alertes provenant de différents outils de sécurité (firewall, EDR, XDR) en métriques, pour exposer ces données sur Prometheus afin de générer des dashboards dynamiques depuis Grafana, dans le but de centraliser la supervision des logs sur une même plateforme.
-img: assets/img/projects/professionnels/prometheus_grafana/1_projet_aws_okta_illustration.png
+img: assets/img/projects/professionnels/prometheus_grafana/1_prometheus_grafana_illustration.png
 importance: 2
 category: professionnels
 tags: [SOC, SIEM, Python, Prometheus, Grafana]
@@ -18,17 +18,9 @@ images:
 ## Aperçu
 
 <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay='{"delay":5000,"disableOnInteraction":false}' speed="1000">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/4_mfa_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/5_okta_dashboard.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/6_okta_people.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/7_okta_groups.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/8_okta_aws_people_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/9_okta_aws_groups_assign.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/10_okta_user_console.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/11_mfa_okta.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/12_sso_aws.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/13_nat_config.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/14_mysql_access.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/3_dashboard_forcepoint.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/4_dashboard_vision_one.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/projects/professionnels/prometheus_grafana/5_dashboard_apex_central.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
 </swiper-container>
 
 <br>
@@ -89,6 +81,8 @@ Voici la liste des technologies et outils que j’ai utilisés pour concevoir et
 * **JSON** pour importer la configuration de la plateforme de supervision en environnement de production.
 
 * **Exporters** pour exposer les métriques issues des logs sur le web, afin que Prometheus puisse les collecter.
+
+<br>
 
 ## Résultats
 
