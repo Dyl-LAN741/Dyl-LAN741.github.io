@@ -36,7 +36,7 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projets/personnels/aws_okta/";
             },},{id: "projects-supervision-centralisée-des-logs-et-alertes-avec-prometheus-et-grafana",
-          title: 'Supervision centralisée des logs et alertes avec Prometheus et Grafana.',
+          title: 'Supervision centralisée des logs et alertes avec Prometheus et Grafana',
           description: "Dans ce projet, j’ai développé un pipeline en Python pour convertir des logs et alertes provenant de différents outils de sécurité (firewall, EDR, XDR) en métriques, pour exposer ces données sur Prometheus afin de générer des dashboards dynamiques depuis Grafana, dans le but de centraliser la supervision des logs sur une même plateforme.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/professionnels/prometheus_grafana/";
