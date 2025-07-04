@@ -3,10 +3,11 @@ published: true
 
 layout: page
 title: "Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA"
-description: Dans ce projet, j’ai intégré Okta à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique via la fédération des identités, l'automatisation du provisioning des comptes utilisateurs, et la mise en place du MFA pour les accès aux consoles d'AWS et d'Okta.
+description: Dans ce projet, j’ai intégré un fournisseur d'identité (IdP) à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique (SSO) via la fédération des identités, le provisioning des comptes utilisateurs (SCIM), et la mise en place du MFA pour sécuriser les accès aux consoles d'Okta et AWS, dans le but de renforcer la sécurité, simplifier la gestion des accès et d'améliorer l'expérience utilisateur.
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnels
+tags: [IAM, Cloud, AWS, Okta, Terraform]
 permalink: /projets/personnels/aws_okta/
 # toc:
 #   sidebar: left
@@ -36,7 +37,9 @@ images:
 
 Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.
 
-Je voulais un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes.
+Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités devient un pilier central pour garantir la sécurité, la conformité et la gestion des accès. La nécessité de centraliser, sécuriser et standardiser l’authentification et l’autorisation s’impose comme un enjeu stratégique.
+
+Je voulais un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes. 
 
 <br>
 
