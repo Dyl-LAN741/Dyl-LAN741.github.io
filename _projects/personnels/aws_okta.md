@@ -120,7 +120,7 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place,
 
 * Principes de **moindre privilège** avec des politiques IAM personnalisés et granulaires en fonction des rôles (**RBAC**).
 
-* **Infrastructure as Code (IaC)** via Terraform pour pour un déploiement automatisé, reproductible et scalable.
+* **Infrastructure as Code (IaC)** via Terraform pour un déploiement automatisé, reproductible et scalable.
 
 * **Fédération d’identité** entre Okta et AWS via SAML 2.0 permettant une **authentification unique (SSO)**.
 
