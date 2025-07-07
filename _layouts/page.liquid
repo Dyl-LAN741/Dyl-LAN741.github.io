@@ -11,12 +11,14 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    {% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
-    {% assign mois_index = page.date | date: "%-m" | minus: 1 %}
-    {% assign mois_nom = mois[mois_index] %}
-    <p class="post-meta">
-      {{ page.date | date: "%-d" }} {{ mois_nom }} {{ page.date | date: "%Y" }}
-    </p>
+    {% if page.date %}
+      {% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+      {% assign mois_index = page.date | date: "%-m" | minus: 1 %}
+      {% assign mois_nom = mois[mois_index] %}
+      <p class="post-meta">
+        {{ page.date | date: "%-d" }} {{ mois_nom }} {{ page.date | date: "%Y" }}
+      </p>
+    {% endif %}
     <p class="post-description">{{ page.description }}</p>
   </header>
 
