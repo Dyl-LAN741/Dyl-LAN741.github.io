@@ -3,7 +3,7 @@ published: true
 
 layout: page
 title: "Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA"
-date: "2025-06-23"
+date: 2025-06-23
 description: Dans ce projet, j’ai sécurité et simplifier la gestion des accès tout en d'améliorant l'expérience des utilisateurs en intégrant un fournisseur d'identité (IdP) à AWS afin de centraliser la gestion des identités et des accès, en appliquant l'authentification unique (SSO) via la fédération des identités, le provisioning des utilisateurs (SCIM), et la mise en place du MFA pour sécuriser les accès aux consoles d'Okta et AWS.
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1

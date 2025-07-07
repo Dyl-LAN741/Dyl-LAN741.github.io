@@ -28,6 +28,10 @@ back_to_top: true # set to false to disable the back to top button
 # Theme
 # -----------------------------------------------------------------------------
 
+# code highlighter theme
+#highlight_theme_light: vs   # https://github.com/jwarby/jekyll-pygments-themes
+#highlight_theme_dark: monokai    # https://github.com/jwarby/jekyll-pygments-themes
+
 # repo color theme
 prefers-color-scheme: light
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
@@ -283,6 +287,12 @@ jekyll-archives:
       categories: "/blog/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  projects:
+    enabled: [year, tags, categories]
+    permalinks:
+      year: "/projects/:year/"
+      tags: "/projects/:type/:name/"
+      categories: "/projects/:type/:name/"
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
@@ -296,7 +306,7 @@ scholar:
   first_name: [Dylan, D.]
 
   style: apa
-  locale: en
+  locale: fr_FR
 
   source: /_bibliography/
   bibliography: papers.bib
