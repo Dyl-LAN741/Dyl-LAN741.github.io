@@ -19,6 +19,19 @@ layout: default
         {{ page.date | date: "%-d" }} {{ mois_nom }} {{ page.date | date: "%Y" }}
       </p>
     {% endif %}
+    {% if page.tags and page.tags != empty %}
+      <p class="post-tags">
+        &nbsp; &middot; &nbsp;
+        {% for tag in page.tags %}
+          <a href="{{ tag | slugify | prepend: '/projets/tag/' | relative_url }}">
+            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+          </a>
+          {% unless forloop.last %}
+            &nbsp;
+          {% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
     <p class="post-description">{{ page.description }}</p>
   </header>
 

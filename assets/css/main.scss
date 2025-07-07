@@ -137,3 +137,30 @@ body.loaded {
   opacity: 1;
   transition: opacity 0.6s ease;
 }
+
+.tag {
+  background: $unc-color;
+  color: white;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  border-radius: 0.25rem;
+  margin-right: 0.3em;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  background: darken($unc-color, 10%);
+  color: white;
+}
+
+.hoverable {
+  transition: transform 0.3s ease;
+}
+
+.hoverable:hover {
+  transform: scale(1.03);
+  z-index: 2;
+}

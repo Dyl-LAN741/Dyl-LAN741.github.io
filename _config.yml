@@ -290,9 +290,9 @@ jekyll-archives:
   projects:
     enabled: [year, tags, categories]
     permalinks:
-      year: "/projects/:year/"
-      tags: "/projects/:type/:name/"
-      categories: "/projects/:type/:name/"
+      year: "/projets/:year/"
+      tags: "/projets/:type/:name/"
+      categories: "/projets/:type/:name/"
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog

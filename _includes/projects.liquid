@@ -8,12 +8,23 @@
           path=project.img
           sizes = "250px"
           alt="project thumbnail"
-          class="card-img-top zoom-on-hover"
+          class="card-img-top"
         %}
       {% endif %}
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
+
+        {% if project.tags and project.tags != empty %}
+          <p class="project-tags">
+            {% for tag in project.tags %}
+              <a href="{{ tag | slugify | prepend: '/projets/tag/' | relative_url }}" class="tag">
+                <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+              </a>
+            {% endfor %}
+          </p>
+        {% endif %}
+
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon">
