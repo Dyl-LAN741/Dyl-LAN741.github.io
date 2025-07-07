@@ -30,14 +30,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/contact/";
           },
-        },{id: "projects-intégration-d-okta-à-aws-fédération-d-identité-provisioning-et-mfa",
-          title: 'Intégration d’Okta à AWS : fédération d’identité, provisioning et MFA',
-          description: "Dans ce projet, j’ai sécurité et simplifier la gestion des accès tout en d&#39;améliorant l&#39;expérience des utilisateurs en intégrant un fournisseur d&#39;identité (IdP) à AWS afin de centraliser la gestion des identités et des accès, en appliquant l&#39;authentification unique (SSO) via la fédération des identités, le provisioning des utilisateurs (SCIM), et la mise en place du MFA pour sécuriser les accès aux consoles d&#39;Okta et AWS.",
+        },{id: "projects-intégration-d-39-okta-à-aws-fédération-provisioning-et-mfa",
+          title: 'Intégration d&amp;#39;Okta à AWS : fédération, provisioning et MFA',
+          description: "J’ai sécurisé et simplifié la gestion des accès en intégrant un fournisseur d’identité (IdP) à AWS, centralisant ainsi l’authentification via SSO, le provisioning des utilisateurs (SCIM) et le MFA pour les consoles Okta et AWS.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/personnels/aws_okta/";
-            },},{id: "projects-supervision-centralisée-des-logs-et-alertes-avec-prometheus-et-grafana",
-          title: 'Supervision centralisée des logs et alertes avec Prometheus et Grafana',
-          description: "Dans ce projet, j’ai centralisé la supervision des logs sur une plateforme unique en développant un pipeline en Python pour convertir des logs et alertes provenant de différents outils de sécurité (firewall, EDR, XDR) en métriques, pour les exposer sur Prometheus afin de générer des dashboards dynamiques depuis Grafana.",
+            },},{id: "projects-supervision-centralisée-des-logs-avec-prometheus-et-grafana",
+          title: 'Supervision centralisée des logs avec Prometheus et Grafana',
+          description: "J’ai centralisé la supervision des logs en développant un pipeline Python qui convertit les logs et alertes de divers outils de sécurité en métriques exposées sur Prometheus, permettant la création de dashboards dynamiques avec Grafana.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/professionnels/prometheus_grafana/";
             },},];
