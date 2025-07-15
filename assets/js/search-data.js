@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "projects-intégration-d-39-okta-à-aws-fédération-provisioning-et-mfa",
           title: 'Intégration d&amp;#39;Okta à AWS : fédération, provisioning et MFA',
-          description: "J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en applicant des mesures de sécurité telles que l&#39;authentification multifacteur et des contrôles d&#39;accès basés sur les rôles.",
+          description: "J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l&#39;authentification multifacteur et des contrôles d&#39;accès basés sur les rôles.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/personnels/aws_okta/";
             },},{id: "projects-supervision-centralisée-des-alertes-avec-prometheus-et-grafana",
