@@ -48,13 +48,13 @@
 - title: Projets
   type: time_table
   contents:
-    - title: "<a href='/projects/aws_okta/'>Intégration d’Okta à AWS : IaC, fédération d’identité (SAML), provisioning (SCIM) et MFA.</a>"
+    - title: "<a href='/projects/aws_okta/'>Intégration d’Okta à AWS : IaC, fédération d’identité, provisioning et MFA.</a>"
       year: 2025
       description: "Architecture cloud <b>AWS</b> automatisée avec <b>Terraform</b> et intégré avec le fournisseur d'identité Okta pour mettre en place l'authentification unique (SSO) et le provisioning automatisé des utilisateurs d'AWS
       Mise en œuvre des principes de sécurité cloud tels que le moindre privilège, l’authentification forte (MFA), la segmentation réseau."
     - title: <a href="https://github.com/Dyl-LAN741/timing_attack_rsa">Attaque temporelle contre l'algorithme de chiffrement RSA</a>
       year: 2022
-      description: Implémentation complète de l'algorithme <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA">RSA</a> (génération des clés, chiffrement, déchiffrement, signature) avec padding <a href="https://www.rfc-editor.org/rfc/rfc2313">PKCS#1 v1.5</a> en <b>langage C</b> et à l'aide des bibliothèques <b>OpenSSL</b> et <b>GNU Multiple Precision (GNU MP)</b>, et réalisation d'une attaque par canal auxiliaire basée sur le temps d'opération (attaque temporelle) afin de retrouver la clé secrète de l'algorithme RSA.
+      description: Implémentation complète de l'algorithme <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA">RSA</a> (génération des clés, chiffrement, déchiffrement, signature) avec padding <a href="https://www.rfc-editor.org/rfc/rfc2313">PKCS#1 v1.5</a> en <b>langage C</b> et à l'aide des bibliothèques <b>OpenSSL</b> et <b>GNU Multiple Precision (GNU MP)</b>, et réalisation d'une attaque par canal auxiliaire basée sur le temps de calcul afin de retrouver la clé secrète de l'algorithme RSA.
     - title: <a href="https://github.com/Dyl-LAN741/Dylchat">Application de messagerie chiffrée en temps réel</a>
       year: 2022
       description: Application développée avec <b>Node.js</b> pour le frontend, <b>Express.js</b> pour le backend, utilisant <b>MongoDB</b> pour le stockage des données et <b>Socket.IO</b> pour la communication en temps réel de manière sécurisée.
