@@ -4,7 +4,7 @@ published: true
 layout: page
 title: "Intégration d'Okta à AWS : fédération, provisioning et MFA"
 date: 2025-06-23
-description: J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en applicant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.
+description: J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnels
