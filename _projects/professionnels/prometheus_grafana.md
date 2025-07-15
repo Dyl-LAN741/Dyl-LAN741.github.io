@@ -2,9 +2,9 @@
 published: true
 
 layout: page
-title: "Supervision centralisée des logs avec Prometheus et Grafana"
+title: "Supervision centralisée des alertes avec Prometheus et Grafana"
 date: 2025-07-04
-description: J’ai centralisé la supervision des logs en développant un pipeline Python qui convertit les logs et alertes de divers outils de sécurité en métriques exposées sur Prometheus, permettant la création de dashboards dynamiques avec Grafana.
+description: J’ai centralisé la supervision des alertes provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.
 img: assets/img/projects/professionnels/prometheus_grafana/1_prometheus_grafana_illustration.png
 importance: 2
 category: professionnels
