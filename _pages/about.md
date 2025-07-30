@@ -3,7 +3,7 @@ layout: about
 title:  Dylan HARAL
 permalink: /
 subtitle: >
-  <p><strong>Aspiring IAM Consultant</strong> | Passionné par l'innovation et la cybersécurité</p>
+  <p><strong>Junior en Cybersécurité</strong> | Passionné par l'innovation et la cybersécurité</p>
   <br>
 
 profile:

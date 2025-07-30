@@ -54,7 +54,7 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true        # fixe the navbar
-footer_fixed: false       # fixe the footer
+footer_fixed: true       # fixe the footer
 search_enabled: false     # enable searchbar
 socials_in_search: false  # show social in search results
 posts_in_search: true     # show posts in search results
@@ -223,6 +223,7 @@ exclude:
   - _posts/
   - _pages/news.md
   - _news/
+  - _pages/confirmation-contact.md
 
 keep_files:
   - CNAME
