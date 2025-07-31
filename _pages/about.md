@@ -39,8 +39,6 @@ Je m'appelle Dylan Haral, je suis jeune consultant en cybersécurité et passion
 
 Ce site retrace mon parcours et illustre mon évolution dans cet univers. J’y partage mon <a href="{{ '/cv' | relative_url }}">CV</a> ainsi que mes <a href="{{ '/projets' | relative_url }}">projets</a>.
 
-<!--- , ainsi qu’un <a href="{{ '/blog' | relative_url }}">blog</a> où je traite de l'innovation, de veille et de réflexions autour de la cybersécurité. --->
-
 Bonne exploration !
 
 <br>
