@@ -17,12 +17,12 @@
   
   
     
-      Supervision centralisée des alertes avec Prometheus et Grafana | Dylan HARAL
+      Supervision centralisée des logs avec Prometheus et Grafana | Dylan HARAL
     
   
 </title>
 <meta name="author" content="Dylan HARAL">
-<meta name="description" content="J’ai centralisé la supervision des alertes provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.">
+<meta name="description" content="J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.">
 
   <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
@@ -226,7 +226,7 @@
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Supervision centralisée des alertes avec Prometheus et Grafana</h1>
+    <h1 class="post-title">Supervision centralisée des logs avec Prometheus et Grafana</h1>
     
       
       
@@ -274,7 +274,7 @@
         
       </p>
     
-    <p class="post-description">J’ai centralisé la supervision des alertes provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.</p>
+    <p class="post-description">J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.</p>
   </header>
 
   <article>
@@ -342,7 +342,7 @@
 
 <p>La supervision devenait en effet de plus en plus complexe à gérer, en raison de la multiplicité des outils de sécurité (firewalls, EDR, XDR) déployés dans le système d’information (SI).</p>
 
-<p>L’objectif principal était de faciliter le travail des analystes en centralisant la collecte, le traitement et la visualisation des logs et alertes issus de ces différents outils, via une plateforme de supervision unifiée.</p>
+<p>L’objectif principal était de faciliter le travail des analystes en centralisant la collecte, le traitement et la visualisation des logs issus de ces différents outils, via une plateforme de supervision unifiée.</p>
 
 <p><br></p>
 
@@ -393,11 +393,11 @@
 
 <h2 id="technologies-et-outils-utilisés">Technologies et outils utilisés</h2>
 
-<p>Voici la liste des technologies et outils que j’ai utilisés pour concevoir et mettre en place la plateforme de supervision :</p>
+<p>Voici la liste des technologies et outils que j’ai utilisé pour concevoir et mettre en place la plateforme de supervision :</p>
 
 <ul>
   <li>
-    <p><strong>Python</strong> pour collecter et transformer les logs et les alertes provenant des différents outils de cybersécurité en métriques.</p>
+    <p><strong>Python</strong> pour collecter les logs provenant des différents outils de sécurité via API REST et pour les transformer en métriques.</p>
   </li>
   <li>
     <p><strong>Docker</strong> pour conteneuriser les différents composants de la plateforme (Prometheus, Grafana), afin d’assurer une intégration plus simple et sécurisée.</p>
@@ -406,16 +406,16 @@
     <p><strong>Prometheus</strong> pour récupérer et stocker les métriques exposées sur le web dans une base de données de séries temporelles.</p>
   </li>
   <li>
-    <p><strong>Grafana</strong> pour mettre en forme les métriques stockées dans Prometheus et les visualiser sous forme de tableaux de bord dynamiques.</p>
+    <p><strong>Grafana</strong> pour mettre en forme les métriques stockées dans Prometheus et les visualiser sous forme de tableaux de bord dynamiques (graphes, tableaux, redirection).</p>
   </li>
   <li>
-    <p><strong>YAML</strong> pour configurer Prometheus et les API des outils de sécurité.</p>
+    <p><strong>YAML</strong> pour configurer Prometheus et l’accès aux API des outils de sécurité.</p>
   </li>
   <li>
     <p><strong>JSON</strong> pour importer la configuration de la plateforme de supervision en environnement de production.</p>
   </li>
   <li>
-    <p><strong>Exporters</strong> pour exposer les métriques issues des logs sur le web, afin que Prometheus puisse les collecter.</p>
+    <p><strong>Exporters</strong> pour exposer les métrique sur le web, afin que Prometheus puisse les collecter.</p>
   </li>
 </ul>
 
@@ -423,7 +423,7 @@
 
 <h2 id="résultats">Résultats</h2>
 
-<p>Un total de trois tableaux de bord ont été réalisés et mis en place pour superviser trois outils de sécurité :</p>
+<p>Un total de trois tableaux de bord a été réalisé et mis en place pour superviser trois outils de sécurité :</p>
 
 <ul>
   <li>
@@ -447,19 +447,16 @@
 
 <ul>
   <li>
-    <p>interagir avec les API des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs et alertes critiques.</p>
+    <p>interagir avec les API des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs critiques.</p>
   </li>
   <li>
     <p>développer des exporters pour exposer des métriques en vue de leur intégration dans Prometheus.</p>
   </li>
   <li>
-    <p>configurer et utiliser Prometheus pour la collecte de métriques issues des logs.</p>
+    <p>configurer et utiliser Prometheus pour la collecte de métriques de logs.</p>
   </li>
   <li>
-    <p>importer ces métriques et concevoir des tableaux de bord de supervision dans Grafana.</p>
-  </li>
-  <li>
-    <p>importer des metrics et concevoir des tableaux de bord de supervision sur Grafana.</p>
+    <p>importer des métriques dans des tableaux de bord sur Grafana pour de la supervision de logs.</p>
   </li>
 </ul>
 

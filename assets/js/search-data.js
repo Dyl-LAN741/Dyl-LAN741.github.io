@@ -32,12 +32,12 @@ ninja.data = [{
           },
         },{id: "projects-intégration-d-39-okta-à-aws-fédération-provisioning-et-mfa",
           title: 'Intégration d&amp;#39;Okta à AWS : fédération, provisioning et MFA',
-          description: "J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l&#39;authentification multifacteur et des contrôles d&#39;accès basés sur les rôles.",
+          description: "J’ai sécurisé et simplifié la gestion des accès et des identités au sein d&#39;un environnement cloud, en y intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l&#39;authentification multifacteur et des contrôles d&#39;accès basés sur les rôles.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/personnels/aws_okta/";
-            },},{id: "projects-supervision-centralisée-des-alertes-avec-prometheus-et-grafana",
-          title: 'Supervision centralisée des alertes avec Prometheus et Grafana',
-          description: "J’ai centralisé la supervision des alertes provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.",
+            },},{id: "projects-supervision-centralisée-des-logs-avec-prometheus-et-grafana",
+          title: 'Supervision centralisée des logs avec Prometheus et Grafana',
+          description: "J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertie ces alertes en métriques stockable dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.",
           section: "Projects",handler: () => {
               window.location.href = "/projets/professionnels/prometheus_grafana/";
             },},];
