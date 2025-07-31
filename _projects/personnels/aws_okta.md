@@ -4,7 +4,7 @@ published: true
 layout: page
 title: "Intégration d'Okta à AWS : fédération, provisioning et MFA"
 date: 2025-06-23
-description: J’ai sécurisé et simplifié la gestion des accès et des utilisateurs dans un environnement cloud, en y intégrant un fournisseur d’identité pour centraliser l’authentification, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.
+description: J’ai sécurisé et simplifié la gestion des accès et des identités au sein d'un environnement cloud, en y intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.
 img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
 importance: 1
 category: personnels
@@ -38,9 +38,9 @@ images:
 
 Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.
 
-Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités devient un pilier central pour garantir la sécurité, la conformité et la gestion des accès. La nécessité de centraliser, sécuriser et standardiser l’authentification et l’autorisation s’impose comme un enjeu stratégique.
+Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès. La centralisation, la sécurisation et la standardisation des mécanismes d’authentification et d’autorisation représentent désormais un enjeu stratégique majeur.
 
-Je voulais un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes. 
+Je voulais donc un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes. 
 
 <br>
 
@@ -83,7 +83,7 @@ Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par pal
 
 ## Technologies et outils utilisés
 
-Voici la liste des technologies et outils que j’ai utilisés pour concevoir et déployer l'infrastructure cloud et mettre en place une architecture sécurisé avec IAM et fédération d'identité :
+Voici la liste des technologies et outils que j’ai utilisé pour concevoir et déployer l'infrastructure cloud et mettre en place une architecture sécurisé avec IAM et fédération d'identité :
 
 * **AWS**, avec les services suivant :
 
