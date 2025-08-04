@@ -8,7 +8,7 @@ description: J’ai centralisé la supervision des logs provenant de divers outi
 img: assets/img/projects/professionnels/prometheus_grafana/1_prometheus_grafana_illustration.png
 importance: 2
 category: professionnels
-tags: [SOC, SIEM, Python, Prometheus, Grafana]
+tags: [SOC, SIEM, Python, Prometheus, Grafana, Docker]
 permalink: /projets/professionnels/prometheus_grafana/
 # toc:
 #   sidebar: left

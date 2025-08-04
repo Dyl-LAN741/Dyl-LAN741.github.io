@@ -38,17 +38,17 @@ images:
 
 Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.
 
-Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès. La centralisation, la sécurisation et la standardisation des mécanismes d’authentification et d’autorisation représentent désormais un enjeu stratégique majeur.
+Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison, de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités (IAM) s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès. La centralisation, la sécurisation et la standardisation des mécanismes d’authentification et d’autorisation représentent donc un enjeu stratégique majeur.
 
-Je voulais donc un projet ambitieux et pertinent, en définissant des objectifs clairs et réalistes. 
+Je voulais un projet ambitieux et pertinent, capable de répondre à ces enjeux, en structurant mon projet de manière claire et réaliste.
 
 <br>
 
 ### Objectifs
 
-Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par paliers :
+J’ai défini les objectifs suivants :
 
-**1.** Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud.
+**1.** Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud et lles contraintes de coût (je voulais un projet 100 % gratuit).
 
 **2.** Mise en place d’une gestion des identités et des accès, en applicant le principe du moindre privilège.
 
@@ -85,7 +85,7 @@ Afin de structurer efficacement mon projet, j’ai défini mes oblectifs par pal
 
 Voici la liste des technologies et outils que j’ai utilisé pour concevoir et déployer l'infrastructure cloud et mettre en place une architecture sécurisé avec IAM et fédération d'identité :
 
-* **AWS**, avec les services suivant :
+* **AWS** avec un compte Free Tier (gratuit), avec les services suivant :
 
     * **VPC** pour configurer le réseau (sous-réseaux, groupes de sécurité, passerelle internet, table de routage, ...).
 
