@@ -11,10 +11,10 @@ ninja.data = [{
     },
   },{id: "nav-mon-cv",
           title: "Mon CV",
-          description: "Mon CV numérique est consultable ci-dessous, avec des informations et liens supplémentaires. Pour le télécharger au format PDF, cliquez sur l’icône PDF juste en haut à droite de cette page.",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/assets/pdf/CV_Dylan_HARAL.pdf";
           },
         },{id: "nav-mes-projets",
           title: "Mes projets",

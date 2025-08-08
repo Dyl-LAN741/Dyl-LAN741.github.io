@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="js-loading">
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <!-- Metadata, OpenGraph and Schema.org -->
 
@@ -22,7 +21,8 @@
   
 </title>
 <meta name="author" content="Dylan HARAL">
-<meta name="description" content="Mon CV numérique est consultable ci-dessous, avec des informations et liens supplémentaires. Pour le télécharger au format PDF, cliquez sur l’icône PDF juste en haut à droite de cette page.">
+<meta name="description" content="Mon site portfolio.
+">
 
   <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
@@ -37,21 +37,34 @@
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
 
 
 
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
 <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772">
-<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
 
 <!-- Code Syntax Highlighting -->
-<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"
+  media=""
+  id="highlight_theme_light"
+>
 
-
-  <!-- Sidebar Table of Contents -->
-  <link defer href="/assets/css/bootstrap-toc.min.css?6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet">
 
 
 <!-- Styles -->
@@ -62,7 +75,7 @@
   <link rel="shortcut icon" href="/assets/img/android-chrome-192x192.png?9b9f279107a2cf0c61f1793ea6591480">
 
 <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="https://dylan.haral.github.io/cv/">
+<link rel="canonical" href="https://dylan.haral.github.io/assets/pdf/CV_Dylan_HARAL.pdf">
 
 <!-- Dark Mode -->
 <script src="/assets/js/theme.js?01716cb2112f2e0d509da508ce5485e8"></script>
@@ -76,7 +89,7 @@
 
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   </head>
 
   <!-- Body -->
@@ -98,7 +111,15 @@
         </a>
       
       <!-- Navbar Toggle -->
-      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar top-bar"></span>
         <span class="icon-bar middle-bar"></span>
@@ -166,7 +187,7 @@
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/cv/">Mon CV
+                  <a class="nav-link" href="/assets/pdf/CV_Dylan_HARAL.pdf">Mon CV
                     
                       <span class="sr-only">(current)</span>
                     
@@ -217,26 +238,24 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       
-        
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9"><div id="content-wrapper">
+        <div id="content-wrapper">
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
         Mon CV
         
-          <a href="/assets/pdf/CV_Dylan_HARAL.pdf" target="_blank" rel="noopener noreferrer" class="float-right">
+          <a
+            
+              href="/assets/pdf/CV_Dylan_HARAL.pdf"
+            
+            target="_blank"
+            rel="noopener noreferrer"
+            class="float-right"
+          >
             <img height="60px" src="/assets/img/cv/pdf_icon.svg">
           </a>
         
       </h1>
-      
-        <p class="post-description">Mon CV numérique est consultable ci-dessous, avec des informations et liens supplémentaires. Pour le télécharger au format PDF, cliquez sur l’icône PDF juste en haut à droite de cette page.</p>
       
     </header>
 
@@ -275,7 +294,7 @@
         <b>Téléphone</b>
       </td>
       
-        <td class="p-1 pl-2 font-weight-light text"><a href="tel:+33652487554">(+33) 6 52 48 75 54</a></td>
+        <td class="p-1 pl-2 font-weight-light text"><a href="tel:+33652487554">(+33)&nbsp;6&nbsp;52&nbsp;48&nbsp;75&nbsp;54</a></td>
       
       
     </tr>
@@ -370,7 +389,7 @@
                         </li>
                       
                         <li>
-                          <span class="subitem">Réalisation d’un POC sur la solution de navigateur d'entreprise <a href="https://www.surf.security/platform/fullbrowser" rel="external nofollow noopener" target="_blank">SURF Security Browser</a>.</span>
+                          <span class="subitem">Réalisation d’un POC sur la solution de navigateur d'entreprise <a href="https://www.surf.security/platform/fullbrowser">SURF Security Browser</a>.</span>
                         </li>
                       
                     </ul>
@@ -387,7 +406,7 @@
                         </li>
                       
                         <li>
-                          <span class="subitem"><b>Veille</b> et <b>recueil de documentation technique</b> sur les fournisseurs (<a href="https://www.island.io" rel="external nofollow noopener" target="_blank">Island</a>, <a href="https://www.paloaltonetworks.com/sase/prisma-access-browser" rel="external nofollow noopener" target="_blank">Palo Alto Networks</a>, <a href="https://www.surf.security" rel="external nofollow noopener" target="_blank">SURF</a>, <a href="https://layerxsecurity.com" rel="external nofollow noopener" target="_blank">LayerX</a>, <a href="https://seraphicsecurity.com" rel="external nofollow noopener" target="_blank">Seraphic</a>), l'architecture, les alternatives ou technologies similaires (VDI/RBI), les analystes (<a href="https://en.wikipedia.org/wiki/Gartner" rel="external nofollow noopener" target="_blank">Gartner</a>).</span>
+                          <span class="subitem"><b>Veille</b> et <b>recueil de documentation technique</b> sur les fournisseurs (<a href="https://www.island.io">Island</a>, <a href="https://www.paloaltonetworks.com/sase/prisma-access-browser">Palo Alto Networks</a>, <a href="https://www.surf.security">SURF</a>, <a href="https://layerxsecurity.com">LayerX</a>, <a href="https://seraphicsecurity.com">Seraphic</a>), l'architecture, les alternatives ou technologies similaires (VDI/RBI), les analystes (<a href="https://en.wikipedia.org/wiki/Gartner">Gartner</a>).</span>
                         </li>
                       
                         <li>
@@ -479,11 +498,11 @@
                         </li>
                       
                         <li>
-                          <span class="subitem"><b>Phase de préproduction terminée</b> pour la plateforme de monitoring. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/exporter" rel="external nofollow noopener" target="_blank">[voir 1]</a> <a href="https://github.com/Dyl-LAN741/apex" rel="external nofollow noopener" target="_blank">[voir 2]</a></span>
+                          <span class="subitem"><b>Phase de préproduction terminée</b> pour la plateforme de monitoring. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/exporter">[voir 1]</a> <a href="https://github.com/Dyl-LAN741/apex">[voir 2]</a></span>
                         </li>
                       
                         <li>
-                          <span class="subitem"><b>Intégration réussi</b> du filtre d'adresses IP dans le firewall externe. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/ip_filter" rel="external nofollow noopener" target="_blank">[voir]</a></span>
+                          <span class="subitem"><b>Intégration réussi</b> du filtre d'adresses IP dans le firewall externe. <a href="https://github.com/Dyl-LAN741/forcepoint/tree/main/ip_filter">[voir]</a></span>
                         </li>
                       
                         <li>
@@ -533,7 +552,7 @@
         
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           
-            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="/projects/aws_okta/">Intégration d’Okta à AWS : IaC, fédération d’identité, provisioning et MFA.</a></h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href='/projects/aws_okta/'>Intégration d’Okta à AWS : IaC, fédération d’identité, provisioning et MFA.</a></h6>
           
           
           
@@ -572,7 +591,7 @@
         
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           
-            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/timing_attack_rsa" rel="external nofollow noopener" target="_blank">Attaque temporelle contre l'algorithme de chiffrement RSA</a></h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/timing_attack_rsa">Attaque temporelle contre l'algorithme de chiffrement RSA</a></h6>
           
           
           
@@ -581,7 +600,7 @@
               
                 <li>
                   
-                    <span class="item">Implémentation complète de l'algorithme <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" rel="external nofollow noopener" target="_blank">RSA</a> (génération des clés, chiffrement, déchiffrement, signature) avec padding <a href="https://www.rfc-editor.org/rfc/rfc2313" rel="external nofollow noopener" target="_blank">PKCS#1 v1.5</a> en <b>langage C</b> et à l'aide des bibliothèques <b>OpenSSL</b> et <b>GNU Multiple Precision (GNU MP)</b>, et réalisation d'une attaque par canal auxiliaire basée sur le temps de calcul afin de retrouver la clé secrète de l'algorithme RSA.</span>
+                    <span class="item">Implémentation complète de l'algorithme <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA">RSA</a> (génération des clés, chiffrement, déchiffrement, signature) avec padding <a href="https://www.rfc-editor.org/rfc/rfc2313">PKCS#1 v1.5</a> en <b>langage C</b> et à l'aide des bibliothèques <b>OpenSSL</b> et <b>GNU Multiple Precision (GNU MP)</b>, et réalisation d'une attaque par canal auxiliaire basée sur le temps de calcul afin de retrouver la clé secrète de l'algorithme RSA.</span>
                   
                 </li>
               
@@ -611,7 +630,7 @@
         
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           
-            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/Dylchat" rel="external nofollow noopener" target="_blank">Application de messagerie chiffrée en temps réel</a></h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/Dylchat">Application de messagerie chiffrée en temps réel</a></h6>
           
           
           
@@ -650,7 +669,7 @@
         
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           
-            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/man_middle_attack" rel="external nofollow noopener" target="_blank">Attaque par le milieu contre l'algorithme de chiffrement par bloc (PRESENT24) (24 bits) ‑ variante de PRESENT (64 bits)</a></h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="https://github.com/Dyl-LAN741/man_middle_attack">Attaque par le milieu contre l'algorithme de chiffrement par bloc (PRESENT24) (24 bits) ‑ variante de PRESENT (64 bits)</a></h6>
           
           
           
@@ -659,7 +678,7 @@
               
                 <li>
                   
-                    <span class="item">Implémentation de l'algorithme de chiffrement par bloc PRESENT24 (qui est une version réduite de <a href="https://www.iacr.org/archive/ches2007/47270450/47270450.pdf?utm_source=chatgpt.com" rel="external nofollow noopener" target="_blank">PRESENT</a>) en <b>langage C</b> et réalisation d'une attaque par le milieu (MITM) sur l'algorithme 2PRESENT24 pour retrouver les deux clés secrètes.</span>
+                    <span class="item">Implémentation de l'algorithme de chiffrement par bloc PRESENT24 (qui est une version réduite de <a href="https://www.iacr.org/archive/ches2007/47270450/47270450.pdf?utm_source=chatgpt.com">PRESENT</a>) en <b>langage C</b> et réalisation d'une attaque par le milieu (MITM) sur l'algorithme 2PRESENT24 pour retrouver les deux clés secrètes.</span>
                   
                 </li>
               
@@ -924,7 +943,7 @@
     </li>
   
     <li class="list-group-item">
-      <h5 class="title font-weight-medium">IAM &amp; Auth</h5>
+      <h5 class="title font-weight-medium">IAM & Auth</h5>
       
         <ul class="subitems">
           
@@ -1148,7 +1167,7 @@
         <ul class="subitems">
           
             <li>
-              <span class="subitem">Root-Me - <i><a href="https://www.root-me.org/Dylan-Haral" rel="external nofollow noopener" target="_blank">voir mon profil</a></i></span>
+              <span class="subitem">Root-Me - <i><a href="https://www.root-me.org/Dylan-Haral">voir mon profil</a></i></span>
             </li>
           
         </ul>
@@ -1168,8 +1187,7 @@
               
                 <ul class="card-text font-weight-light list-group list-group-flush">
   
-    <li class="list-group-item">
-<u>Cybersécurité:</u> NIST, ISO 27001, SASE/SSE, Zero Trust (ZTNA), OWASP, navigateurs d'entreprise, RBI, VDI</li>
+    <li class="list-group-item"><u>Cybersécurité:</u> NIST, ISO 27001, SASE/SSE, Zero Trust (ZTNA), OWASP, navigateurs d'entreprise, RBI, VDI</li>
   
 </ul>
 
@@ -1181,9 +1199,7 @@
     </article>
   </div>
 
-</div></div>
-          </div>
-        
+</div>
       
     </div>
 
@@ -1194,7 +1210,7 @@
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
       
-  © 2025
+  &copy; 2025
   Dylan
   
   HARAL · Tous droits réservés · <a href="/privacy-policy/">Politique de confidentialité</a>
@@ -1209,11 +1225,19 @@
 
     <!-- JavaScripts -->
     <!-- jQuery -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
 
 <!-- Bootsrap & MDB scripts -->
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
 
 <!-- Transition -->
 <script>
@@ -1265,8 +1289,18 @@
 
 
   <!-- Masonry & imagesLoaded -->
-  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
   <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
 
 
@@ -1295,13 +1329,15 @@
 
 
   <!-- Medium Zoom JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
   <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script>
 
 
-
-  <!-- Sidebar Table of Contents -->
-  <script defer src="/assets/js/bootstrap-toc.min.js?c82ff4de8b0955d6ff14f5b05eed7eb6"></script>
 
 
 
@@ -1324,10 +1360,21 @@
 
 
   <!-- MathJax -->
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+    integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    crossorigin="anonymous"
+  ></script>
   
     <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script>
-    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
   
 
 
