@@ -14,7 +14,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/assets/pdf/CV_Dylan_HARAL.pdf";
+            window.location.href = "/_pages/cv/";
           },
         },{id: "nav-mes-projets",
           title: "Mes projets",
