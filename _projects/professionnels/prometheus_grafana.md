@@ -4,7 +4,7 @@ published: true
 layout: page
 title: "Supervision centralisée des logs avec Prometheus et Grafana"
 date: 2025-07-04
-description: J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertit ces alertes en métriques stockables dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.
+description: "<u>Résumé</u> : Centralisation des logs provenant de divers outils de sécurité (EDR, XDR, NGFW) via un pipeline Python qui convertit ces logs en métriques stockables dans Prometheus, permettant leur visualisation sur des tableaux de bord dynamiques dans Grafana et facilitant ainsi la supervision."
 img: assets/img/projects/professionnels/prometheus_grafana/1_prometheus_grafana_illustration.png
 importance: 2
 category: professionnels
@@ -87,26 +87,21 @@ Voici la liste des technologies et outils que j’ai utilisé pour concevoir et 
 
 ## Résultats
 
-Un total de trois tableaux de bord a été réalisé et mis en place pour superviser trois outils de sécurité :
+* **Trois tableaux de bord** pour superviser les logs de trois outils de sécurité (le firewall externe Forcepoint, l'XDR Trend Micro Vision One, l'EDR Trend Micro Apex Central).
 
-* le firewall externe **Forcepoint**.
+* **Visualisation des indicateurs de performances KPIs** comme le score, la criticité, le nombre d'événements, le virus ou malware associé, l'IP source, l'IP destination, etc.
 
-* l'XDR **Trend Micro Vision One**.
-
-* l'EDR **Trend Micro Apex Central**.
-
-Les dashboards sont exportables dans l'environnement de production sur Grafana via un fichier de configuration JSON. Les configurations de Prometheus et Grafana sont enregistrés au sein d'une image Docker.
-
+$ **Livrable d'explication et d'utilisation** des différents tableaux de bord.
 <br>
 
 ## Ce que j'ai appris
 
 En menant à bien ce projet, j’ai appris à :
 
-* interagir avec les API des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs critiques.
+* **Interagir avec les API REST** des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs critiques.
 
-* développer des exporters pour exposer des métriques en vue de leur intégration dans Prometheus.
+* **Développer des exporters** pour exposer des métriques en vue de leur intégration dans Prometheus.
 
-* configurer et utiliser Prometheus pour la collecte de métriques de logs.
+* **Configurer Prometheus et Grafana** pour la collecte de métriques des logs et leurs visualisations.
 
-* importer des métriques dans des tableaux de bord sur Grafana pour de la supervision de logs.
+* **Développer des tableaux de bord de supervision de logs** en important les données depuis Prometheus sur Gafana.

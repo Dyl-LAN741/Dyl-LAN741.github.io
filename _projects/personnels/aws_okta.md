@@ -4,8 +4,8 @@ published: true
 layout: page
 title: "Intégration d'Okta à AWS : fédération, provisioning et MFA"
 date: 2025-06-23
-description: J’ai sécurisé et simplifié la gestion des accès et des identités au sein d'un environnement cloud, en y intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.
-img: assets/img/projects/personnels/aws_okta/1_projet_aws_okta_illustration.png
+description: "<u>Résumé</u> : Sécurisation et simplification de la gestion des accès et des identités au sein d'un environnement cloud, intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, et appliquant des mesures de sécurité telles que l'authentification multifacteur, des contrôles d'accès basés sur les rôles (RBAC)."
+img: assets/img/projects/personnels/aws_okta/1_aws_okta_illustration.png
 importance: 1
 category: personnels
 tags: [IAM, Cloud, AWS, Okta, Terraform]
@@ -36,11 +36,9 @@ images:
 
 ## Contexte
 
-Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.
+Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison, de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités (IAM) s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès face aux des risques liés à une mauvaise gestion des autorisations, à des configurations excessivement permissives ou à l’absence de contrôle d’accès granulaire. Assurer un contrôle centralisé et sécurisé des accès devient alors un enjeu stratégique majeur.
 
-Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison, de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités (IAM) s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès. La centralisation, la sécurisation et la standardisation des mécanismes d’authentification et d’autorisation représentent donc un enjeu stratégique majeur.
-
-Je voulais un projet ambitieux et pertinent, capable de répondre à ces enjeux, en structurant mon projet de manière claire et réaliste.
+Souhaitant approfondir l'IAM, ce projet a été mené dans une démarche d’apprentissage autonome, avec pour ambition de simuler au mieux une architecture professionnelle dans AWS, tout en appliquant une stratégie IAM conforme aux bonnes pratiques de sécurité cloud.
 
 <br>
 
@@ -48,7 +46,7 @@ Je voulais un projet ambitieux et pertinent, capable de répondre à ces enjeux,
 
 J’ai défini les objectifs suivants :
 
-**1.** Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud et lles contraintes de coût (je voulais un projet 100 % gratuit).
+**1.** Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud et les contraintes de coût (je voulais un projet 100 % gratuit).
 
 **2.** Mise en place d’une gestion des identités et des accès, en applicant le principe du moindre privilège.
 
@@ -64,7 +62,7 @@ J’ai défini les objectifs suivants :
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra.png" title="schema_infrastructure_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/2_aws_okta_infra.png" title="schema_infrastructure_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -72,7 +70,7 @@ J’ai défini les objectifs suivants :
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam.png" title="schema_architecture_iam_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/personnels/aws_okta/3_aws_okta_iam.png" title="schema_architecture_iam_projet_aws_okta" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -112,7 +110,7 @@ Voici la liste des technologies et outils que j’ai utilisé pour concevoir et 
 ## Fonctionnalités mises en place
 
 Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place, en s’appuyant sur les bonnes pratiques de sécurité cloud et de gestion des identités (IAM) :
-
+s
 * **Segmentation réseau** en deux sous-réseaux privé et publique.
 
 * **Isolation réseau** avec configuration de groupes de sécurité et ajout d'un bastion pour l'accès sécurité au service RDS (MySQL).
@@ -135,10 +133,10 @@ Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place,
 
 En menant à bien ce projet, j'ai appris à :
 
-* mettre en place une infrastructure cloud sécurisée en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.
+* **Mettre en place une infrastructure cloud sécurisée** en utilisant l'Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.
 
-* concevoir et appliquer des politiques d'accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.
+* **Concevoir et appliquer des politiques d'accès granulaires** basées sur les rôles (RBAC) et le principe du moindre privilège.
 
-* intégrer une solution de fournisseur d'identité externe (Okta) auprès d'un fournisseur de service (AWS) pour mettre en place la fédération d'identité et le provisioning automatisé des utilisateurs.
+* **Intégrer une solution de fournisseur d'identité externe (Okta)** auprès d'un fournisseur de service (AWS) pour mettre en place la fédération d'identité et le provisioning automatisé des utilisateurs.
 
-* mettre en place une authentification multifacteur (MFA) basé sur TOTP pour les accès sensibles (accès aux console d'Okta et d'AWS, application du MFA avant le SSO).
+* **Mettre en place une authentification multifacteur (MFA)** basé sur TOTP pour les accès sensibles (accès aux console d'Okta et d'AWS, application du MFA avant le SSO).

@@ -13,7 +13,9 @@
       {% endif %}
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
+        {% comment %}
+          <p class="card-text">{{ project.description }}</p>
+        {% endcomment %}
 
         {% if project.tags and project.tags != empty %}
           <p class="project-tags">

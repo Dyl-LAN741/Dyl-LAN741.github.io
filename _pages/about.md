@@ -3,7 +3,7 @@ layout: about
 title:  Dylan HARAL
 permalink: /
 subtitle: >
-  <p><strong>Aspiring Cybersecurity Consultant</strong> | Passionné par l'innovation et la cybersécurité</p>
+  <p><strong>Aspiring Cybersecurity Expert</strong> | Passionné par l'innovation et la cybersécurité</p>
   <br>
 
 profile:
@@ -35,7 +35,7 @@ latest_posts:
 
 <h4>Bienvenue ! 👋</h4>
 <br>
-Je m'appelle Dylan Haral, je suis jeune consultant en cybersécurité et passionné par les enjeux actuels du domaine.
+Je m'appelle Dylan Haral, je suis jeune passionné en cybersécurité et je m'intéresse aux enjeux actuels du domaine.
 
 Ce site retrace mon parcours et illustre mon évolution dans cet univers. J’y partage mon <a href="{{ '/cv' | relative_url }}">CV</a> ainsi que mes <a href="{{ '/projets' | relative_url }}">projets</a>.
 
