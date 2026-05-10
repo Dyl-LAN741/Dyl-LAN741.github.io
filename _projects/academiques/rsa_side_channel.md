@@ -59,20 +59,6 @@ Ce travail illustre les enjeux de sécurité liés non seulement à la robustess
     Schéma du fonctionnement de RSA et de l'attaque par canal auxiliaire.
 </div>
 
-Organigramme fonctionnel (ex : phases du projet) :
-Étude de l’algorithme RSA
-Implémentation de RSA
-Simulation de mesures temporelles
-Analyse des données
-Implémentation de l’attaque
-Évaluation des résultats
-
-Organigramme technique (modules du programme) :
-Génération de clés
-Chiffrement/déchiffrement
-Mesure de temps d'exécution
-Script d’attaque (analyse et reconstruction de la clé)
-
 <br>
 
 ## Technologies et outils utilisés
