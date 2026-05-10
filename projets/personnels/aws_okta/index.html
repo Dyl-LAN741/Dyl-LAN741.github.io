@@ -22,7 +22,7 @@
   
 </title>
 <meta name="author" content="Dylan HARAL">
-<meta name="description" content="J’ai sécurisé et simplifié la gestion des accès et des identités au sein d'un environnement cloud, en y intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.">
+<meta name="description" content="&lt;u&gt;Résumé&lt;/u&gt; : Sécurisation et simplification de la gestion des accès et des identités au sein d'un environnement cloud, intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, et appliquant des mesures de sécurité telles que l'authentification multifacteur, des contrôles d'accès basés sur les rôles (RBAC).">
 
   <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
@@ -122,6 +122,18 @@
           
           <!-- Other pages -->
           
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           
@@ -276,7 +288,7 @@
         
       </p>
     
-    <p class="post-description">J’ai sécurisé et simplifié la gestion des accès et des identités au sein d'un environnement cloud, en y intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, tout en appliquant des mesures de sécurité telles que l'authentification multifacteur et des contrôles d'accès basés sur les rôles.</p>
+    <p class="post-description"><u>Résumé</u> : Sécurisation et simplification de la gestion des accès et des identités au sein d'un environnement cloud, intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, et appliquant des mesures de sécurité telles que l'authentification multifacteur, des contrôles d'accès basés sur les rôles (RBAC).</p>
   </header>
 
   <article>
@@ -476,11 +488,9 @@
 
 <h2 id="contexte">Contexte</h2>
 
-<p>Souhaitant approfondir le domaine de la gestion des identités et des accès (IAM), j’ai décidé de me lancer dans un projet personnel aligné avec les enjeux actuels en cybersécurité.</p>
+<p>Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison, de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités (IAM) s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès face aux des risques liés à une mauvaise gestion des autorisations, à des configurations excessivement permissives ou à l’absence de contrôle d’accès granulaire. Assurer un contrôle centralisé et sécurisé des accès devient alors un enjeu stratégique majeur.</p>
 
-<p>Dans un contexte où les environnements cloud deviennent de plus en plus complexes, en raison, de la multiplication des services, des utilisateurs et des points d’accès, la gestion des identités (IAM) s’impose comme un pilier central pour assurer la sécurité, la conformité et le contrôle des accès. La centralisation, la sécurisation et la standardisation des mécanismes d’authentification et d’autorisation représentent donc un enjeu stratégique majeur.</p>
-
-<p>Je voulais un projet ambitieux et pertinent, capable de répondre à ces enjeux, en structurant mon projet de manière claire et réaliste.</p>
+<p>Souhaitant approfondir l’IAM, ce projet a été mené dans une démarche d’apprentissage autonome, avec pour ambition de simuler au mieux une architecture professionnelle dans AWS, tout en appliquant une stratégie IAM conforme aux bonnes pratiques de sécurité cloud.</p>
 
 <p><br></p>
 
@@ -488,7 +498,7 @@
 
 <p>J’ai défini les objectifs suivants :</p>
 
-<p><strong>1.</strong> Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud et lles contraintes de coût (je voulais un projet 100 % gratuit).</p>
+<p><strong>1.</strong> Déploiement de l’infrastructure cloud via Terraform en respectant les principes de sécurité du cloud et les contraintes de coût (je voulais un projet 100 % gratuit).</p>
 
 <p><strong>2.</strong> Mise en place d’une gestion des identités et des accès, en applicant le principe du moindre privilège.</p>
 
@@ -512,10 +522,10 @@
   <picture>
     
       
-        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-480.webp 480w,/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-800.webp 800w,/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/2_aws_okta_infra-480.webp 480w,/assets/img/projects/personnels/aws_okta/2_aws_okta_infra-800.webp 800w,/assets/img/projects/personnels/aws_okta/2_aws_okta_infra-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
       
     
-    <img src="/assets/img/projects/personnels/aws_okta/2_projet_aws_okta_infra.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_infrastructure_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/projects/personnels/aws_okta/2_aws_okta_infra.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_infrastructure_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
 
   
@@ -536,10 +546,10 @@
   <picture>
     
       
-        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-480.webp 480w,/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-800.webp 800w,/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
+        <source class="responsive-img-srcset" srcset="/assets/img/projects/personnels/aws_okta/3_aws_okta_iam-480.webp 480w,/assets/img/projects/personnels/aws_okta/3_aws_okta_iam-800.webp 800w,/assets/img/projects/personnels/aws_okta/3_aws_okta_iam-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
       
     
-    <img src="/assets/img/projects/personnels/aws_okta/3_projet_aws_okta_iam.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_architecture_iam_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/projects/personnels/aws_okta/3_aws_okta_iam.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="schema_architecture_iam_projet_aws_okta" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
 
   
@@ -602,8 +612,8 @@
 
 <h2 id="fonctionnalités-mises-en-place">Fonctionnalités mises en place</h2>
 
-<p>Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place, en s’appuyant sur les bonnes pratiques de sécurité cloud et de gestion des identités (IAM) :</p>
-
+<p>Dans le cadre de ce projet, plusieurs fonctionnalités ont été mises en place, en s’appuyant sur les bonnes pratiques de sécurité cloud et de gestion des identités (IAM) :
+s</p>
 <ul>
   <li>
     <p><strong>Segmentation réseau</strong> en deux sous-réseaux privé et publique.</p>
@@ -639,16 +649,16 @@
 
 <ul>
   <li>
-    <p>mettre en place une infrastructure cloud sécurisée en utilisant l’Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.</p>
+    <p><strong>Mettre en place une infrastructure cloud sécurisée</strong> en utilisant l’Infrastructure as Code et en respectant les bonnes pratiques et règles de cybersécurité.</p>
   </li>
   <li>
-    <p>concevoir et appliquer des politiques d’accès granulaires basées sur les rôles (RBAC) et le principe du moindre privilège.</p>
+    <p><strong>Concevoir et appliquer des politiques d’accès granulaires</strong> basées sur les rôles (RBAC) et le principe du moindre privilège.</p>
   </li>
   <li>
-    <p>intégrer une solution de fournisseur d’identité externe (Okta) auprès d’un fournisseur de service (AWS) pour mettre en place la fédération d’identité et le provisioning automatisé des utilisateurs.</p>
+    <p><strong>Intégrer une solution de fournisseur d’identité externe (Okta)</strong> auprès d’un fournisseur de service (AWS) pour mettre en place la fédération d’identité et le provisioning automatisé des utilisateurs.</p>
   </li>
   <li>
-    <p>mettre en place une authentification multifacteur (MFA) basé sur TOTP pour les accès sensibles (accès aux console d’Okta et d’AWS, application du MFA avant le SSO).</p>
+    <p><strong>Mettre en place une authentification multifacteur (MFA)</strong> basé sur TOTP pour les accès sensibles (accès aux console d’Okta et d’AWS, application du MFA avant le SSO).</p>
   </li>
 </ul>
 
@@ -669,7 +679,7 @@
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
       
-  © 2025
+  © 2026
   Dylan
   
   HARAL · Tous droits réservés · <a href="/privacy-policy/">Politique de confidentialité</a>

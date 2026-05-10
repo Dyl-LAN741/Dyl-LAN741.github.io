@@ -22,7 +22,7 @@
   
 </title>
 <meta name="author" content="Dylan HARAL">
-<meta name="description" content="J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertit ces alertes en métriques stockables dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.">
+<meta name="description" content="&lt;u&gt;Résumé&lt;/u&gt; : Centralisation des logs provenant de divers outils de sécurité (EDR, XDR, NGFW) via un pipeline Python qui convertit ces logs en métriques stockables dans Prometheus, permettant leur visualisation sur des tableaux de bord dynamiques dans Grafana et facilitant ainsi la supervision.">
 
   <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
@@ -122,6 +122,18 @@
           
           <!-- Other pages -->
           
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           
@@ -283,7 +295,7 @@
         
       </p>
     
-    <p class="post-description">J’ai centralisé la supervision des logs provenant de divers outils de sécurité sur une plateforme, en développant un pipeline Python qui convertit ces alertes en métriques stockables dans Prometheus, permettant la création de tableaux de bord dynamiques avec Grafana.</p>
+    <p class="post-description"><u>Résumé</u> : Centralisation des logs provenant de divers outils de sécurité (EDR, XDR, NGFW) via un pipeline Python qui convertit ces logs en métriques stockables dans Prometheus, permettant leur visualisation sur des tableaux de bord dynamiques dans Grafana et facilitant ainsi la supervision.</p>
   </header>
 
   <article>
@@ -432,23 +444,17 @@
 
 <h2 id="résultats">Résultats</h2>
 
-<p>Un total de trois tableaux de bord a été réalisé et mis en place pour superviser trois outils de sécurité :</p>
-
 <ul>
   <li>
-    <p>le firewall externe <strong>Forcepoint</strong>.</p>
+    <p><strong>Trois tableaux de bord</strong> pour superviser les logs de trois outils de sécurité (le firewall externe Forcepoint, l’XDR Trend Micro Vision One, l’EDR Trend Micro Apex Central).</p>
   </li>
   <li>
-    <p>l’XDR <strong>Trend Micro Vision One</strong>.</p>
-  </li>
-  <li>
-    <p>l’EDR <strong>Trend Micro Apex Central</strong>.</p>
+    <p><strong>Visualisation des indicateurs de performances KPIs</strong> comme le score, la criticité, le nombre d’événements, le virus ou malware associé, l’IP source, l’IP destination, etc.</p>
   </li>
 </ul>
 
-<p>Les dashboards sont exportables dans l’environnement de production sur Grafana via un fichier de configuration JSON. Les configurations de Prometheus et Grafana sont enregistrés au sein d’une image Docker.</p>
-
-<p><br></p>
+<p>$ <strong>Livrable d’explication et d’utilisation</strong> des différents tableaux de bord.
+<br></p>
 
 <h2 id="ce-que-jai-appris">Ce que j’ai appris</h2>
 
@@ -456,16 +462,16 @@
 
 <ul>
   <li>
-    <p>interagir avec les API des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs critiques.</p>
+    <p><strong>Interagir avec les API REST</strong> des différents outils de sécurité (EDR, XDR, firewall) pour récupérer des logs critiques.</p>
   </li>
   <li>
-    <p>développer des exporters pour exposer des métriques en vue de leur intégration dans Prometheus.</p>
+    <p><strong>Développer des exporters</strong> pour exposer des métriques en vue de leur intégration dans Prometheus.</p>
   </li>
   <li>
-    <p>configurer et utiliser Prometheus pour la collecte de métriques de logs.</p>
+    <p><strong>Configurer Prometheus et Grafana</strong> pour la collecte de métriques des logs et leurs visualisations.</p>
   </li>
   <li>
-    <p>importer des métriques dans des tableaux de bord sur Grafana pour de la supervision de logs.</p>
+    <p><strong>Développer des tableaux de bord de supervision de logs</strong> en important les données depuis Prometheus sur Gafana.</p>
   </li>
 </ul>
 
@@ -486,7 +492,7 @@
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
       
-  © 2025
+  © 2026
   Dylan
   
   HARAL · Tous droits réservés · <a href="/privacy-policy/">Politique de confidentialité</a>
