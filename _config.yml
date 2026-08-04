@@ -29,8 +29,8 @@ back_to_top: true # set to false to disable the back to top button
 # -----------------------------------------------------------------------------
 
 # code highlighter theme
-#highlight_theme_light: vs   # https://github.com/jwarby/jekyll-pygments-themes
-#highlight_theme_dark: monokai    # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_light: monokai # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: monokai # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
 prefers-color-scheme: light
@@ -80,22 +80,22 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-E7BC413HV3 # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: SJfKIZnqAfgj2OOUKFboWyQOOOGj1hwKHRXGXOgbtbg # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Zirrus Stratrust # blog_name will be displayed in your blog page
-blog_description: >
-  <i>“Là où l’invisible devient tangible, les frontières du possible s’élargissent.”</i>
+blog_name: Le Blog Cyber # blog_name will be displayed in your blog page
+blog_description: # >
+  # <i>“Là où l’invisible devient tangible, les frontières du possible s’élargissent.”</i>
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -204,7 +204,7 @@ exclude:
   - _includes/repository/                     # |__
   - _pages/teaching.md                        # remove teaching
   - _pages/publications.md                    # remove publications (Jekyll Scholar commented in config.yml + 
-  # - _layouts/bib.liquid                       # | jekyll/scholar commented in plugins config.yml + jekyll-scholar commented in Gemfile)
+  # - _layouts/bib.liquid                       # jekyll/scholar commented in plugins config.yml + jekyll-scholar commented in Gemfile)
   # - _includes/bib_search.liquid               # |
   # - _includes/citation.liquid                 # |
   # - _includes/selected_papers.liquid          # |
@@ -219,8 +219,8 @@ exclude:
   - _pages/dropdown.md                        # remove drop-down menu
   - assets/json/resume.json                   # remove resume using json
   - _projects/archives_projects/
-  - _pages/blog.md
-  - _posts/
+  # - _pages/blog.md                           # remove blog
+  # - _posts/                                  # |__
   - _pages/news.md
   - _news/
   - _pages/confirmation-contact.md
@@ -295,8 +295,8 @@ jekyll-archives:
       tags: "/projets/:type/:name/"
       categories: "/projets/:type/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["iam", "appsec", "cloud", "soc", "pentest", "crypto", "grc", "ia"] #, "zero trust", "forensics"] # these tags will be displayed on the front page of your blog
+display_categories: # ["guide", "actualité", "analyse", "étude de cas"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
