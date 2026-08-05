@@ -6,6 +6,18 @@
     
     <!-- Metadata, OpenGraph and Schema.org -->
 
+  <!-- Website verification -->
+  
+    <meta name="google-site-verification" content="SJfKIZnqAfgj2OOUKFboWyQOOOGj1hwKHRXGXOgbtbg">
+  
+  
+  <!--
+    Avoid warning on Google Chrome Error with Permissions-Policy header:
+    Origin trial controlled feature not enabled: 'interest-cohort'.
+    see https://stackoverflow.com/a/75119417
+  -->
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
 
 
 
@@ -416,6 +428,20 @@
   
 
 
+
+  <!-- Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7BC413HV3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E7BC413HV3');
+  </script>
+  <script defer src="/assets/js/google-analytics-setup.js?12374742c4b1801ba82226e617af7e2d"></script>
 
 
 
