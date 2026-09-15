@@ -37,7 +37,7 @@ latest_posts:
 <br>
 Je m'appelle Dylan Haral, je suis jeune passionné en cybersécurité et je m'intéresse aux enjeux actuels du domaine.
 
-Ce site retrace mon parcours et illustre mon évolution dans cet univers. J’y partage mon <a href="{{ '/cv' | relative_url }}">CV</a> ainsi que mes <a href="{{ '/projets' | relative_url }}">projets</a>.
+Ce site retrace mon parcours et illustre mon évolution dans cet univers. J’y partage mon <a href="{{ '/assets/pdf/CV_Dylan_Haral.pdf' | relative_url }}">CV</a> ainsi que mes <a href="{{ '/projets' | relative_url }}">projets</a>.
 
 Bonne exploration !
 
