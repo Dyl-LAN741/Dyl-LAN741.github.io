@@ -2,7 +2,7 @@
 published: true
 
 layout: page
-title: "Intégration d'Okta à AWS : fédération, provisioning et MFA"
+title: "Fédération d'identité d'Okta vers AWS"
 date: 2025-06-23
 description: "<u>Résumé</u> : Sécurisation et simplification de la gestion des accès et des identités au sein d'un environnement cloud, intégrant un fournisseur d’identité pour assurer l’authentification unique, le provisionnement des utilisateurs, et appliquant des mesures de sécurité telles que l'authentification multifacteur, des contrôles d'accès basés sur les rôles (RBAC)."
 img: assets/img/projects/personnels/aws_okta/1_aws_okta_illustration.png

@@ -2,7 +2,7 @@
 published: true
 
 layout: page
-title: "Supervision centralisée des logs avec Prometheus et Grafana"
+title: "Supervision centralisée avec Prometheus et Grafana"
 date: 2025-07-04
 description: "<u>Résumé</u> : Centralisation des logs provenant de divers outils de sécurité (EDR, XDR, NGFW) via un pipeline Python qui convertit ces logs en métriques stockables dans Prometheus, permettant leur visualisation sur des tableaux de bord dynamiques dans Grafana et facilitant ainsi la supervision."
 img: assets/img/projects/professionnels/prometheus_grafana/1_prometheus_grafana_illustration.png

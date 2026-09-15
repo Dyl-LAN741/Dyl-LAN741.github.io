@@ -2,7 +2,7 @@
 published: true
 
 layout: page
-title: "Implémentation et attaque temporelle sur RSA"
+title: "Implémentation et attaque temporelle sur le chiffrement RSA"
 date: 2026-05-10
 description: "<u>Résumé</u> : Implémentation complète de l'algorithme de chiffrement RSA, puis réalisation une attaque par canal auxiliaire (attaque temporelle) pour compromettre le crytosystème et retrouver la clé secrète."
 img: assets/img/projects/academiques/timing_attack/1_rsa_timing_attack_illustration.png
